@@ -1,0 +1,19 @@
+{
+  "name": "skeletor",
+  "version": "1.0.0",
+  "description": "My skele.to/r/ website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefftherobot/skeletor.git"
+  },
+  "author": "Jeff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefftherobot/skeletor/issues"
+  },
+  "homepage": "https://github.com/jefftherobot/skeletor#readme"
+}
