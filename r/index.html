@@ -1,12 +1,11 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>I help no one but myself!</title>
-		<meta http-equiv="refresh" content="0;URL='r/'" />
-		<style type="text/css">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I help no one but myself!</title>
+	<style type="text/css">
 		* { margin: 0; padding: 0; }
 		html, body { height: 100%; background:black; }
+		video { position: z-index: 1; object-fit: ; }
 		#overlay {
 			position: absolute;
 			z-index: 99;
@@ -19,8 +18,14 @@
 				url('data:image/svg+xml;utf8,<svg viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" /></svg>') 2px 2px/3px 3px
 	}
 	</style>
-	</head>
-	<body>
-		<div id="overlay"></div>
-	</body>
+</head>
+<body onclick="unmute()">
+	<div id="overlay"></div>
+	<video id="vid" width="100%" height="100%" autoplay loop muted>
+		<source src="skeletor.mp4" type="video/mp4" />
+	</video>
+	<script>
+		function unmute(){ document.getElementById("vid").muted=false; }
+</script>
+</body>
 </html>
