@@ -16,7 +16,7 @@ Here's some C to prove the syntax highlighting works:
 #include <stdio.h>
 
 int main(void) {
-    printf("Hello from skeletor!\n");
+    printf("Hello from sychonet!\n");
     return 0;
 }
 ```
