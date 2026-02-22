@@ -8,7 +8,42 @@ import Base from '../layouts/Base.astro';
 ▒▒▒ LINKS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <p>Coming soon.</p>
+  <div class="link-section">
+    <pre class="link-header">▒▒▒ FORUMS ▒▒▒</pre>
+    <ul>
+      <li><a href="https://forum.vcfed.org/">Vintage Computer Federation Forums</a> — The hub for vintage computing restoration and discussion</li>
+      <li><a href="https://dosreloaded.de/forum/">DOSReloaded</a> — German DOS/retro computing forum, excellent technical depth</li>
+      <li><a href="https://www.vogons.org/">VOGONS</a> — Very Old Games On New Systems — retro PC gaming and hardware</li>
+    </ul>
+  </div>
+
+  <div class="link-section">
+    <pre class="link-header">▒▒▒ RESOURCES ▒▒▒</pre>
+    <ul>
+      <li><a href="http://bitsavers.org/">Bitsavers</a> — Archive of computer manuals, firmware, and documentation</li>
+      <li><a href="https://archive.org/">Internet Archive</a> — The digital library of everything, including vintage software</li>
+      <li><a href="https://www.mouser.com/">Mouser Electronics</a> — Components for when you need that one specific capacitor at 2am</li>
+      <li><a href="https://stuff.mit.edu/afs/sipb/contrib/doc/specs/">MIT SIPB Specs Archive</a> — Chipset datasheets and hardware specifications</li>
+    </ul>
+  </div>
+
+  <div class="link-section">
+    <pre class="link-header">▒▒▒ CHANNELS ▒▒▒</pre>
+    <ul>
+      <li><a href="https://www.youtube.com/@The8BitGuy">The 8-Bit Guy</a> — Retro computing restorations and retrobright techniques</li>
+      <li><a href="https://www.youtube.com/@adriansdigitalbasement">Adrian's Digital Basement</a> — Deep-dive vintage computer repairs</li>
+      <li><a href="https://www.youtube.com/@LGR">LGR</a> — Lazy Game Reviews — retro tech, thrifting, and oddware</li>
+    </ul>
+  </div>
+
+  <div class="link-section">
+    <pre class="link-header">▒▒▒ MY STUFF ▒▒▒</pre>
+    <ul>
+      <li><a href="https://github.com/k0bura">GitHub</a> — Source code and project repos</li>
+      <li><a href="https://github.com/k0bura/compaq-portable-486c-restoration">Compaq 486c Restoration Repo</a> — Full documentation with datasheets</li>
+      <li><a href="https://forum.vcfed.org/index.php?threads/compaq-portable-486c-restore-and-upgrade.73098/">VCFed Thread</a> — My Compaq restoration thread</li>
+    </ul>
+  </div>
 
   <p><a href="/">&larr; back to main [ESC]</a></p>
 </Base>
@@ -21,5 +56,33 @@ import Base from '../layouts/Base.astro';
     padding: 0 !important;
     margin: 0 0 0.5rem 0;
     overflow: hidden;
+  }
+
+  .link-section {
+    margin: 1rem 0;
+  }
+
+  .link-header {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.3rem 0;
+  }
+
+  .link-section ul {
+    padding-left: 2rem;
+  }
+
+  .link-section li {
+    position: relative;
+    margin: 0.4rem 0;
+  }
+
+  .link-section li::before {
+    content: '>';
+    color: #665200;
+    position: absolute;
+    left: -1.5rem;
   }
 </style>
