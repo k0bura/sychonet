@@ -12,6 +12,14 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
+
+const isSubProject = project.id.includes('/');
+const parentId = isSubProject ? project.id.split('/')[0] : null;
+const allProjects = await getCollection('projects');
+const parent = parentId ? allProjects.find((p) => p.id === parentId) : null;
+
+const backHref = parent ? `/projects/${parentId}/` : '/projects/';
+const backLabel = parent ? `back to ${parent.data.title}` : 'back to project logs';
 ---
 
 <Base title={`${project.data.title} - sychonet`} description={project.data.description}>
@@ -22,5 +30,5 @@ const { Content } = await render(project);
     <Content />
   </article>
   <hr />
-  <p><a href="/projects/">&larr; back to project logs [ESC]</a></p>
+  <p><a href={backHref}>&larr; {backLabel} [ESC]</a></p>
 </Base>
