@@ -8,7 +8,64 @@ import Base from '../layouts/Base.astro';
 ▒▒▒ ABOUT ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <p>Coming soon.</p>
+  <pre class="terminal">{`
+> cat /dev/sysop
+
+HANDLE:    k0bura
+CLASS:     Sysop / Digital Archaeologist
+ALIGNMENT: Chaotic Neutral
+THREAT:    Low (unless provoked with bad solder joints)
+`}</pre>
+
+  <div class="bio">
+    <pre class="bio-header">▒▒▒ ORIGIN STORY ▒▒▒</pre>
+
+    <p>Grew up staring into CRTs until the phosphors burned
+    permanent ghosts into the glass. Fell in love with the dark
+    art of making silicon do things it wasn't supposed to do.
+    Not the kind of hacking that makes the news. The kind where
+    you're elbow-deep in hex dumps at 3am whispering "why are
+    you like this" to a UART that won't handshake.</p>
+
+    <p>There's a beauty in watching software talk to hardware.
+    No abstraction layers. No frameworks. Just voltage levels
+    and timing diagrams and the raw satisfaction of an LED
+    blinking because YOU told it to. Electrons obeying your
+    will. That's the real magic.</p>
+
+    <pre class="bio-header">▒▒▒ MISSION ▒▒▒</pre>
+
+    <p>Restoring the passions from the golden age of creative
+    engineering. Before the Pentium ruined everything by being
+    too fast to appreciate. Back when laptops weighed 12kg and
+    we called them "luggables" with a straight face. Back when
+    a portable computer meant you only needed two people to
+    carry it.</p>
+
+    <p>This is the era of the 8-bit and 16-bit machines. The
+    Z80, the 6502, the 8088. Machines you could understand
+    completely. Machines that didn't phone home. Machines that
+    booted in the time it takes a modern laptop to decide which
+    update to force on you.</p>
+
+    <pre class="bio-header">▒▒▒ TECHNICAL SPECS ▒▒▒</pre>
+  </div>
+
+  <pre class="specs">{`
+INTERESTS:     Vintage computing, PCB design, dark arts
+LANGUAGES:     ASM, C, solder, profanity
+TOOLS:         Oscilloscope, logic analyzer, steady hands
+WEAKNESS:      eBay listings for "untested" hardware
+POWER SUPPLY:  Coffee (unregulated, prone to brownouts)
+BIOS:          Find me in the offset codes
+`}</pre>
+
+  <pre class="terminal">{`
+> 0x4B30 0x4275 0x5241 0x0000
+> // if you know, you know
+>
+> EOF
+`}</pre>
 
   <p><a href="/">&larr; back to main</a></p>
 </Base>
@@ -21,5 +78,37 @@ import Base from '../layouts/Base.astro';
     padding: 0 !important;
     margin: 0 0 0.5rem 0;
     overflow: hidden;
+  }
+
+  .terminal {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0;
+  }
+
+  .bio {
+    margin: 1rem 0;
+  }
+
+  .bio p {
+    margin: 0.5rem 0;
+  }
+
+  .bio-header {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  .specs {
+    color: #c0c0c0;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0;
   }
 </style>

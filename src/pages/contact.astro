@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact - sychonet" description="Contact the sysop">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ CONTACT ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <pre class="terminal">{`
+> ESTABLISHING CONNECTION...
+> CARRIER DETECTED
+> NEGOTIATING BAUD RATE... 2400
+> HANDSHAKE COMPLETE
+>
+> WELCOME TO THE SYCHONET MESSAGING SYSTEM
+> Please select your preferred method of contact:
+`}</pre>
+
+  <div class="methods">
+    <pre class="method-header">METHOD              STATUS         RESPONSE TIME</pre>
+    <pre class="method-divider">─────────────────────────────────────────────────────────────</pre>
+    <pre class="method-entry">Carrier pigeon      OPERATIONAL    3-5 business weeks</pre>
+    <pre class="method-entry">Smoke signals       WEATHER DEP.   varies (do not use indoors)</pre>
+    <pre class="method-entry">Shouting            LIMITED RANGE  immediate (within 50m)</pre>
+    <pre class="method-entry">GitHub              ONLINE         when mass of spaghetti untangles</pre>
+    <pre class="method-entry">Email               DEPRECATED     heat death of universe</pre>
+  </div>
+
+  <pre class="terminal">{`
+> SERIOUS INQUIRIES:
+> Find me on GitHub: k0bura
+> Or open an issue on the repo. I'll see it eventually.
+> Probably.
+>
+> NO CARRIER
+`}</pre>
+
+  <p><a href="/">&larr; back to main</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+
+  .terminal {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0;
+  }
+
+  .methods {
+    margin: 1rem 0;
+  }
+
+  .method-header {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .method-divider {
+    color: #332b00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .method-entry {
+    color: #c0c0c0;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+</style>
