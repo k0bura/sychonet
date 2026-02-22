@@ -16,6 +16,27 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <div class="phone-wall">
+      <pre>{`
+▒▒▒ ACCESS DENIED ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+> TERMINAL SIZE ERROR
+> INSUFFICIENT COLUMN WIDTH
+>
+> Are you seriously trying to view
+> this site on a phone? In ${new Date().getFullYear()}?
+>
+> This site was built for 80 columns.
+> Your device has the screen real
+> estate of a postage stamp.
+>
+> Go find a real computer.
+> Preferably one that weighs at
+> least 5kg and has a CRT.
+>
+> NO CARRIER
+`}</pre>
+    </div>
     <main>
       <slot />
     </main>
@@ -24,6 +45,36 @@ const { title, description } = Astro.props;
     </footer>
   </body>
 </html>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    const tag = (e.target as HTMLElement).tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
+    const key = e.key.toUpperCase();
+
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      const routes: Record<string, string> = {
+        P: '/projects/',
+        A: '/about/',
+        L: '/links/',
+        N: '/news/',
+        F: '/files/',
+        C: '/contact/',
+      };
+      if (routes[key]) {
+        e.preventDefault();
+        window.location.href = routes[key];
+      }
+    }
+
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      window.location.href = '/';
+    }
+  });
+</script>
 
 <style is:global>
   @font-face {
@@ -108,5 +159,27 @@ const { title, description } = Astro.props;
   ul {
     list-style: none;
     padding: 0;
+  }
+
+  .phone-wall {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .phone-wall {
+      display: block;
+    }
+
+    .phone-wall pre {
+      color: #ff4444;
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      white-space: pre-wrap;
+    }
+
+    main, footer {
+      display: none;
+    }
   }
 </style>
