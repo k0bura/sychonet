@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="File Archive - psychonet" description="File archive">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ FILE ARCHIVE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <pre class="file-header">Filename              Size      Date        Description</pre>
+  <pre class="file-divider">─────────────────────────────────────────────────────────────────────────────</pre>
+
+  <div class="file-area">
+    <pre class="area-title">■ /schematics</pre>
+    <pre class="file-entry">  <a href="#">Z80-SBC-REV2.ZIP</a>    48,210    2026-02-15  Z80 single board computer schematic</pre>
+    <pre class="file-entry">  <a href="#">6502-MIN.ZIP</a>        12,844    2026-01-28  Minimal 6502 breadboard layout</pre>
+    <pre class="file-entry">  <a href="#">PSU-BENCH.ZIP</a>        8,192    2026-01-10  Bench PSU build schematic</pre>
+  </div>
+
+  <div class="file-area">
+    <pre class="area-title">■ /firmware</pre>
+    <pre class="file-entry">  <a href="#">MONITOR-V1.ZIP</a>      16,384    2026-02-20  ROM monitor for Z80 SBC</pre>
+    <pre class="file-entry">  <a href="#">EHBASIC.ZIP</a>         32,768    2026-02-01  Enhanced BASIC for 6502</pre>
+  </div>
+
+  <div class="file-area">
+    <pre class="area-title">■ /docs</pre>
+    <pre class="file-entry">  <a href="#">Z80-PINOUT.TXT</a>       2,048    2026-01-20  Z80 CPU pinout reference</pre>
+    <pre class="file-entry">  <a href="#">UART-NOTES.TXT</a>       1,024    2026-01-05  Serial UART setup notes</pre>
+    <pre class="file-entry">  <a href="#">BOM-SBC-R2.CSV</a>       4,096    2026-02-15  Bill of materials, SBC rev2</pre>
+  </div>
+
+  <pre class="file-divider">─────────────────────────────────────────────────────────────────────────────</pre>
+  <pre class="file-footer">8 file(s)              125,566 bytes total              3 area(s)</pre>
+
+  <p><a href="/">&larr; back to main</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+
+  .file-header {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0 0 0;
+  }
+
+  .file-divider {
+    color: #332b00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .file-area {
+    margin: 0.8rem 0;
+  }
+
+  .area-title {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .file-entry {
+    color: #c0c0c0;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .file-footer {
+    color: #665200;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 1rem 0;
+  }
+</style>

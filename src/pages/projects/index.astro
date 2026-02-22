@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Base title="Project Logs - psychonet" description="Project logs and documentation">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ PROJECT LOGS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <ul>
+    {projects.map((project) => (
+      <li>
+        <span class="date">{project.data.date.toISOString().split('T')[0]}</span>
+        <a href={`/projects/${project.id}/`}>
+          {project.data.title}
+        </a>
+        <span class="desc"> - {project.data.description}</span>
+      </li>
+    ))}
+  </ul>
+
+  <p><a href="/">&larr; back to main</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0.3rem 0;
+  }
+
+  .date {
+    color: #665200;
+    margin-right: 0.5rem;
+  }
+
+  .desc {
+    color: #999;
+  }
+</style>

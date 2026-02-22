@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="System News - psychonet" description="System news and updates">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ SYSTEM NEWS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <div class="news-entry">
+    <pre class="news-date">2026-02-21  k0bura</pre>
+    <p>System is online. psychonet is now running on Astro with
+    static builds to GitHub Pages. All sections are operational.</p>
+  </div>
+
+  <div class="news-entry">
+    <pre class="news-date">2026-02-20  k0bura</pre>
+    <p>Initial setup. Migrated old site to the old-site branch.
+    New BBS-style frontend is under construction.</p>
+  </div>
+
+  <div class="news-entry">
+    <pre class="news-date">2026-02-19  k0bura</pre>
+    <p>Registered domain. Planning site architecture and content
+    structure for project documentation.</p>
+  </div>
+
+  <p><a href="/">&larr; back to main</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+
+  .news-entry {
+    margin: 0.8rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #332b00;
+  }
+
+  .news-entry p {
+    margin: 0.3rem 0 0 0;
+  }
+
+  .news-date {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+</style>

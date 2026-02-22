@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Base title={`${project.data.title} - psychonet`} description={project.data.description}>
+  <article>
+    <h1>{project.data.title}</h1>
+    <p style="color: #665200;">{project.data.date.toISOString().split('T')[0]}</p>
+    <hr />
+    <Content />
+  </article>
+  <hr />
+  <p><a href="/projects/">&larr; back to project logs</a></p>
+</Base>
