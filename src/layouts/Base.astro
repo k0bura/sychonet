@@ -291,6 +291,12 @@ const { title, description } = Astro.props;
     display: none;
   }
 
+  @media (max-width: 900px) and (min-width: 601px) {
+    body {
+      font-size: 0.75em;
+    }
+  }
+
   @media (max-width: 600px) {
     .phone-wall {
       display: block;
