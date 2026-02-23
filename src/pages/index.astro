@@ -36,7 +36,7 @@ import Base from '../layouts/Base.astro';
 ▒▒▒ MESSAGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <pre class="motd">{`  MOTD: "Electrons don't care about your deadlines."`}</pre>
+  <pre class="motd" id="motd">{`  MOTD: "..."`}</pre>
 
   <div class="message pinned">
     <span class="msg-badge">■ PINNED</span>
@@ -230,3 +230,41 @@ import Base from '../layouts/Base.astro';
     50% { opacity: 0; }
   }
 </style>
+
+<script>
+  const MOTD_KEY = 'sychonet_motd';
+  const MOTD_TS_KEY = 'sychonet_motd_ts';
+  const DAY_MS = 86400000;
+  const FALLBACK = 'The fortune teller is offline. Try again after rebooting.';
+
+  const el = document.getElementById('motd')!;
+
+  function display(text: string) {
+    const cleaned = text.replace(/\t/g, ' ').replace(/\n/g, ' ').replace(/ {2,}/g, ' ').trim();
+    const truncated = cleaned.length > 68 ? cleaned.slice(0, 65) + '...' : cleaned;
+    el.textContent = `  MOTD: "${truncated}"`;
+  }
+
+  const cached = localStorage.getItem(MOTD_KEY);
+  const cachedTs = Number(localStorage.getItem(MOTD_TS_KEY) || 0);
+  const stale = Date.now() - cachedTs > DAY_MS;
+
+  if (cached && !stale) {
+    display(cached);
+  } else {
+    if (cached) display(cached);
+
+    fetch('http://yerkee.com/api/fortune/computers')
+      .then(r => r.json())
+      .then(data => {
+        if (data.fortune) {
+          localStorage.setItem(MOTD_KEY, data.fortune);
+          localStorage.setItem(MOTD_TS_KEY, String(Date.now()));
+          display(data.fortune);
+        }
+      })
+      .catch(() => {
+        if (!cached) display(FALLBACK);
+      });
+  }
+</script>
