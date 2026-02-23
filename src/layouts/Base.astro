@@ -126,6 +126,7 @@ const { title, description } = Astro.props;
     margin: 0 auto;
     padding: 2rem 1rem;
     line-height: 1.6;
+    font-size: min(1rem, 2vw);
   }
 
   a {
@@ -289,12 +290,6 @@ const { title, description } = Astro.props;
 
   .phone-wall {
     display: none;
-  }
-
-  @media (max-width: 900px) and (min-width: 601px) {
-    body {
-      font-size: 0.75em;
-    }
   }
 
   @media (max-width: 600px) {

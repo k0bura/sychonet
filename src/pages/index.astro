@@ -36,10 +36,30 @@ import Base from '../layouts/Base.astro';
 ▒▒▒ MESSAGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <div class="message">
-    <span class="date">2026-02-21</span>
+  <pre class="motd">{`  MOTD: "Electrons don't care about your deadlines."`}</pre>
+
+  <div class="message pinned">
+    <span class="msg-badge">■ PINNED</span>
     <span class="msg-from">k0bura</span>
-    <p>System is online. Welcome to sychonet. Check out the <a href="/projects/">project logs</a> for build documentation and notes.</p>
+    <p>System is online. Welcome to sychonet. Vintage computing builds, teardowns, and project logs. Navigate with keyboard shortcuts or click around like it's 1994.</p>
+  </div>
+
+  <div class="message">
+    <span class="msg-badge">■ 2026-02-22</span>
+    <span class="msg-tag">NEW PROJECT</span>
+    <a href="/projects/gridcase-1520/">GRiDCASE 1520 restoration</a>
+  </div>
+
+  <div class="message">
+    <span class="msg-badge">■ 2026-02-22</span>
+    <span class="msg-tag">PATCH</span>
+    Tablet font scaling fix (something going on still)
+  </div>
+
+  <div class="message">
+    <span class="msg-badge">■ 2026-02-21</span>
+    <span class="msg-tag">NEW PROJECT</span>
+    <a href="/projects/compaq-486c/">Compaq Portable 486c documentation</a>
   </div>
 
   <pre class="status-bar">{`
@@ -129,8 +149,22 @@ import Base from '../layouts/Base.astro';
     color: #999;
   }
 
+  .motd {
+    color: #665200;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0;
+    font-style: italic;
+  }
+
   .message {
-    margin: 0.8rem 0;
+    margin: 0.3rem 0;
+    padding: 0.3rem 0;
+  }
+
+  .message.pinned {
+    margin: 0.5rem 0 0.8rem 0;
     padding: 0.5rem 0;
     border-bottom: 1px dashed #332b00;
   }
@@ -139,8 +173,18 @@ import Base from '../layouts/Base.astro';
     margin: 0.3rem 0 0 0;
   }
 
+  .msg-badge {
+    color: #665200;
+    margin-right: 0.3rem;
+  }
+
   .msg-from {
     color: #ffcc00;
+  }
+
+  .msg-tag {
+    color: #88cc88;
+    margin-right: 0.3rem;
   }
 
   .status-bar {
