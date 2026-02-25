@@ -267,8 +267,7 @@ import Base from '../layouts/Base.astro';
   }
 
   function display(quote: string) {
-    const lines = quote.split('\n').map(line => `  ${line}`).join('\n');
-    el.textContent = `> MOTD:\n${lines}`;
+    el.textContent = quote;
     revealAll();
   }
 
@@ -289,7 +288,7 @@ import Base from '../layouts/Base.astro';
         display(pick);
       })
       .catch(() => {
-        el.textContent = '> MOTD:\n  NO CARRIER';
+        el.textContent = 'NO CARRIER';
         revealAll();
       });
   }
