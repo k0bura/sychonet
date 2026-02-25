@@ -1,0 +1,10 @@
+name = "sychonet-wall"
+main = "wall.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://sych0.net,http://localhost:4321,http://localhost:3000"
+
+[[kv_namespaces]]
+binding = "WALL_KV"
+id = "d08470ef2f4a48f19654239fe2b535d7"
