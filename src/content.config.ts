@@ -10,4 +10,13 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { projects };
+const hardware = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/hardware' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+  }),
+});
+
+export const collections = { projects, hardware };
