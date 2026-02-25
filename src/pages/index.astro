@@ -1,20 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import fs from 'node:fs';
 
-let fortune = '';
+let fortune = '  NO CARRIER';
 try {
-  const res = await fetch('http://yerkee.com/api/fortune/computers');
-  const data = await res.json();
-  if (data.fortune) {
-    fortune = data.fortune
-      .replace(/\t/g, '    ')
-      .split('\n')
-      .map((line: string) => `  ${line}`)
-      .join('\n')
-      .trimEnd();
-  }
+  const raw = fs.readFileSync('public/fortunes.txt', 'utf-8');
+  const quotes = raw.split('\n%\n').map(q => q.trim()).filter(Boolean);
+  const pick = quotes[Math.floor(Math.random() * quotes.length)];
+  fortune = pick.split('\n').map(line => `  ${line}`).join('\n');
 } catch {}
-if (!fortune) fortune = '  NO CARRIER';
 ---
 
 <Base title="sychonet" description="Project logs and documentation">
@@ -51,7 +45,7 @@ if (!fortune) fortune = '  NO CARRIER';
 ▒▒▒ MESSAGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <pre class="motd">{`  MOTD:\n${fortune}`}</pre>
+  <pre class="motd" id="motd">{`  MOTD:\n${fortune}`}</pre>
 
   <div class="message pinned">
     <span class="msg-badge">■ PINNED</span>
@@ -245,4 +239,37 @@ if (!fortune) fortune = '  NO CARRIER';
     50% { opacity: 0; }
   }
 </style>
+
+<script>
+  const MOTD_KEY = 'sychonet_motd';
+  const MOTD_TS_KEY = 'sychonet_motd_ts';
+  const DAY_MS = 86400000;
+
+  const el = document.getElementById('motd');
+  if (!el) throw new Error('motd element not found');
+
+  function display(quote: string) {
+    const lines = quote.split('\n').map(line => `  ${line}`).join('\n');
+    el.textContent = `  MOTD:\n${lines}`;
+  }
+
+  const cached = localStorage.getItem(MOTD_KEY);
+  const cachedTs = Number(localStorage.getItem(MOTD_TS_KEY) || 0);
+  const stale = Date.now() - cachedTs > DAY_MS;
+
+  if (cached && !stale) {
+    display(cached);
+  } else {
+    fetch('/fortunes.txt')
+      .then(r => r.text())
+      .then(text => {
+        const quotes = text.split('\n%\n').map(q => q.trim()).filter(Boolean);
+        const pick = quotes[Math.floor(Math.random() * quotes.length)];
+        localStorage.setItem(MOTD_KEY, pick);
+        localStorage.setItem(MOTD_TS_KEY, String(Date.now()));
+        display(pick);
+      })
+      .catch(() => {});
+  }
+</script>
 
