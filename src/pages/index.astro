@@ -1,14 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import fs from 'node:fs';
-
-let fortune = '  NO CARRIER';
-try {
-  const raw = fs.readFileSync('public/fortunes.txt', 'utf-8');
-  const quotes = raw.split('\n%\n').map(q => q.trim()).filter(Boolean);
-  const pick = quotes[Math.floor(Math.random() * quotes.length)];
-  fortune = pick.split('\n').map(line => `  ${line}`).join('\n');
-} catch {}
 ---
 
 <Base title="sychonet" description="Project logs and documentation">
@@ -45,27 +36,27 @@ try {
 ▒▒▒ MESSAGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
   </div>
 
-  <pre class="motd" id="motd">{`  MOTD:\n${fortune}`}</pre>
+  <pre class="motd modem-line" id="motd"></pre>
 
-  <div class="message pinned">
+  <div class="message pinned modem-line">
     <span class="msg-badge">■ PINNED</span>
     <span class="msg-from">k0bura</span>
     <p>System is online. Welcome to sychonet. Vintage computing builds, teardowns, and project logs. Navigate with keyboard shortcuts or click around like it's 1994.</p>
   </div>
 
-  <div class="message">
+  <div class="message modem-line">
     <span class="msg-badge">■ 2026-02-22</span>
     <span class="msg-tag">NEW PROJECT</span>
     <a href="/projects/gridcase-1520/">GRiDCASE 1520 restoration</a>
   </div>
 
-  <div class="message">
+  <div class="message modem-line">
     <span class="msg-badge">■ 2026-02-22</span>
     <span class="msg-tag">PATCH</span>
     Tablet font scaling fix (something going on still)
   </div>
 
-  <div class="message">
+  <div class="message modem-line">
     <span class="msg-badge">■ 2026-02-21</span>
     <span class="msg-tag">NEW PROJECT</span>
     <a href="/projects/compaq-486c/">Compaq Portable 486c documentation</a>
@@ -167,6 +158,18 @@ try {
     font-style: italic;
   }
 
+  .modem-line {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.15s ease-in, max-height 0.15s ease-in;
+  }
+
+  .modem-line.visible {
+    opacity: 1;
+    max-height: 10em;
+  }
+
   .message {
     margin: 0.3rem 0;
     padding: 0.3rem 0;
@@ -244,13 +247,22 @@ try {
   const MOTD_KEY = 'sychonet_motd';
   const MOTD_TS_KEY = 'sychonet_motd_ts';
   const DAY_MS = 86400000;
+  const MODEM_DELAY = 350;
 
-  const el = document.getElementById('motd');
-  if (!el) throw new Error('motd element not found');
+  const el = document.getElementById('motd')!;
+  const msgLines = document.querySelectorAll('.modem-line:not(#motd)');
+
+  function revealAll() {
+    el.classList.add('visible');
+    msgLines.forEach((line, i) => {
+      setTimeout(() => line.classList.add('visible'), MODEM_DELAY * (i + 1));
+    });
+  }
 
   function display(quote: string) {
     const lines = quote.split('\n').map(line => `  ${line}`).join('\n');
-    el.textContent = `  MOTD:\n${lines}`;
+    el.textContent = `> MOTD:\n${lines}`;
+    revealAll();
   }
 
   const cached = localStorage.getItem(MOTD_KEY);
@@ -269,7 +281,10 @@ try {
         localStorage.setItem(MOTD_TS_KEY, String(Date.now()));
         display(pick);
       })
-      .catch(() => {});
+      .catch(() => {
+        el.textContent = '> MOTD:\n  NO CARRIER';
+        revealAll();
+      });
   }
 </script>
 
