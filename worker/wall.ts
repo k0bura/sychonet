@@ -15,6 +15,47 @@ const MAX_MSG = 140;
 const MAX_MESSAGES = 500;
 const RATE_LIMIT_SEC = 60;
 
+const PREFIXES = [
+  'Ne0n', 'V4nta', 'H3x', 'Z3ro', 'V0id', 'T0xic', 'Shad0w', 'C1pher',
+  'N3xus', 'Bl1ght', '0mega', 'Dark', 'Pulse', 'Vect0r', 'Raz0r',
+  'Mal1ce', 'Specter', '0bsidian', 'Flux', 'C1nder', 'Hav0c',
+  'Kernel', 'Ven0m', 'Warp', 'Xen0', 'Dr1ft', 'Sable', 'Fract',
+  'Dusk', 'Quanta'
+];
+
+const SUFFIXES = [
+  'C0re', 'Gr1d', 'Hub', 'Vault', 'F0rge', 'Cache', 'Sect0r',
+  'Relay', 'Matr1x', 'Archive', 'Shell', 'C1rcuit', 'Subnet',
+  'Pr0xy', 'Terminal', 'Databank', 'Sanctum', 'Lab', 'Array',
+  'Mainframe', 'Cluster', 'Gateway', 'Sandbox', 'N0de', 'Pipeline',
+  'Backd00r', 'Interface', 'Module', 'Chamber'
+];
+function hashColo(colo: string): number {
+  let h = 0;
+  for (let i = 0; i < colo.length; i++) {
+    h = (h * 31 + colo.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+async function getBoardName(colo: string, kv: KVNamespace): Promise<string> {
+  const key = `board:${colo}`;
+  const cached = await kv.get(key);
+  if (cached) return cached;
+
+  const h = hashColo(colo);
+  const usePrefix = h % 2 === 0;
+  let name: string;
+  if (usePrefix) {
+    name = PREFIXES[h % PREFIXES.length] + colo;
+  } else {
+    name = colo + '-' + SUFFIXES[h % SUFFIXES.length];
+  }
+
+  await kv.put(key, name);
+  return name;
+}
+
 function corsHeaders(origin: string) {
   return {
     'Access-Control-Allow-Origin': origin,
@@ -74,7 +115,8 @@ export default {
       }
 
       const cf = (request as any).cf || {};
-      const location = (cf.colo || '???').toUpperCase();
+      const colo = (cf.colo || '???').toUpperCase();
+      const location = await getBoardName(colo, env.WALL_KV);
 
       const entry: WallEntry = {
         name,
