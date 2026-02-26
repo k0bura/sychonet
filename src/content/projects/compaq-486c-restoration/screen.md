@@ -1,7 +1,7 @@
 ---
 title: "Screen Replacement"
 description: "Replacing the dead Sharp LQ10D016 with a modern LQ104V1DG51 TFT panel"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Overview
@@ -159,9 +159,7 @@ My PSU was already rebuilt, so I had a clean, stable 5V rail available to power 
 - Mount the IC away from heat sources; temperature drift can shift the image up to 4 pixels
 
 ![Delay circuit prototyped on breadboard](../../../assets/images/compaq-486c/screen-replacement/04-delay-circuit-breadboard.jpg)
-
 ![Video card with 74AS02 and BLANK tap wires installed](../../../assets/images/compaq-486c/screen-replacement/06-video-card-modifications.jpg)
-
 ![Modified video card installed in the Compaq chassis](../../../assets/images/compaq-486c/screen-replacement/11-video-card-installed.jpg)
 
 ## Backlight
@@ -183,7 +181,6 @@ The replacement LQ104V1DG51 is physically much smaller than the original LQ10D01
 ## Results
 
 ![VGA graphics mode test — 640×480, 16 colors](../../../assets/images/compaq-486c/screen-replacement/03-graphics-mode-test.jpg)
-
 ![DOOM running on the restored Compaq](../../../assets/images/compaq-486c/screen-replacement/05-doom-running.jpg)
 
 *It's not a vintage computing project until you run DOOM on it. I don't make the rules - the retro community bylaws are very clear on this. No DOOM screenshot, no credibility.*

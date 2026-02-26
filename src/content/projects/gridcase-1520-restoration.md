@@ -1,8 +1,10 @@
 ---
 title: "GRiDCASE 1520 Restoration"
 description: "Full restoration of a 1988 GRiD GRiDCASE 1520 286 laptop with gas plasma display"
-date: 2026-02-22
+date: 2024-07-12
 ---
+
+![GRiDCASE 1520 with GRiD splash screen on plasma display](../../assets/images/gridcase-1520/finished/04-grid-splash.jpg)
 
 A documentation project tracking the restoration of a GRiDCASE 1520 — a rugged 286-class laptop from 1988 built in a magnesium alloy case with a red gas plasma display. Originally designed for military and field use, these machines were built to survive things that would kill lesser hardware.
 
@@ -64,6 +66,10 @@ The original 720K 3.5" floppy drive is replaced with a Gotek USB floppy emulator
 The GRiDCASE supports Flash EEPROM via an offboard AppROM adapter, opening up the possibility of custom firmware, boot ROMs, and diagnostic tools burned directly into the machine.
 
 **[Full ROM building documentation →](/projects/gridcase-1520-restoration/roms/)**
+
+---
+
+**[▒▒▒ VIEW FINISHED PHOTOS →](/gallery/#gridcase-1520)**
 
 ---
 

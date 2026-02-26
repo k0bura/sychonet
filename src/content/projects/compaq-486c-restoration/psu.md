@@ -1,7 +1,7 @@
 ---
 title: "PSU Rebuild"
 description: "Full recap and voltage verification of the original power supply"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Overview
@@ -18,12 +18,9 @@ The PSU board was removed from its enclosure and all electrolytic capacitors wer
 
 After recapping, the PSU was tested with a multimeter to verify clean output on all rails before reconnecting to the motherboard.
 
-**12V rail** — Reading 12.11V, well within spec.
+**12V rail** — Reading 12.11V, and **5V rail** — Reading 5.085V, well within spec.
 
 ![Multimeter reading 12.11V on the 12V rail](../../../assets/images/compaq-486c/psu-rebuild/02-12v-rail-test.jpg)
-
-**5V rail** — Reading 5.085V, well within spec.
-
 ![Multimeter reading 5.085V on the 5V rail](../../../assets/images/compaq-486c/psu-rebuild/03-5v-rail-test.jpg)
 
 ## Reassembly

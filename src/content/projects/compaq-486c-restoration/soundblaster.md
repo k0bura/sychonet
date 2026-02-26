@@ -1,7 +1,7 @@
 ---
 title: "Sound Blaster AWE32"
 description: "Creative Sound Blaster AWE32 CT3900 installation and configuration"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Creative Sound Blaster AWE32 IDE/MKP CSP (CT3900)

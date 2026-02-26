@@ -1,7 +1,7 @@
 ---
 title: "PCMCIA Expansion"
 description: "SCM ISAC2PR10 ISA PCMCIA adapter with WiFi and CompactFlash"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Overview

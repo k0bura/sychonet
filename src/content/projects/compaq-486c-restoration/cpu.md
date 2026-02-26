@@ -1,7 +1,7 @@
 ---
 title: "CPU Upgrade: Am5x86-P75"
 description: "Upgrading from IBM Blue Lightning DX2-66 to AMD Am5x86-P75 at 133 MHz"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Original CPU — IBM Blue Lightning DX2

@@ -1,0 +1,433 @@
+A hacker does for love what others would not do for money.
+%
+A language that doesn't affect the way you think about programming is
+not worth knowing.
+%
+A language that doesn't have everything is actually easier to program
+in than some that do.
+		-- Dennis M. Ritchie
+%
+A debugged program is one for which you have not yet found the conditions
+that make it fail.
+		-- Jerry Ogdin
+%
+A complex system that works is invariably found to have evolved from a
+simple system that works.
+%
+A successful [software] tool is one that was used to do something
+undreamed of by its author.
+		-- S. C. Johnson
+%
+A person who is more than casually interested in computers should be well
+schooled in machine language, since it is a fundamental part of a computer.
+		-- Donald Knuth
+%
+Adding manpower to a late software project makes it later.
+		-- F. Brooks, "The Mythical Man-Month"
+%
+All language designers are arrogant. Goes with the territory...
+		-- Larry Wall
+%
+An algorithm must be seen to be believed.
+		-- D. E. Knuth
+%
+Any sufficiently advanced bug is indistinguishable from a feature.
+		-- Rich Kulawiec
+%
+As in certain cults it is possible to kill a process if you know its true
+name.
+		-- Ken Thompson and Dennis M. Ritchie
+%
+As of next Thursday, UNIX will be flushed in favor of TOPS-10.
+Please update your programs.
+%
+Assembly language experience is [important] for the maturity
+and understanding of how computers work that it provides.
+		-- D. Gries
+%
+Beware of bugs in the above code; I have only proved it correct, not tried it.
+		-- Donald Knuth
+%
+Bell Labs Unix -- Reach out and grep someone.
+%
+C is quirky, flawed, and an enormous success.
+		-- Dennis M. Ritchie
+%
+C makes it easy for you to shoot yourself in the foot.  C++ makes that
+harder, but when you do, it blows away your whole leg.
+		-- Bjarne Stroustrup
+%
+Computers are useless.  They can only give you answers.
+		-- Pablo Picasso
+%
+Counting in octal is just like counting in decimal--if you don't use your
+thumbs.
+		-- Tom Lehrer
+%
+Digital circuits are made from analog parts.
+		-- Don Vonada
+%
+Do not meddle in the affairs of troff, for it is subtle and quick to anger.
+%
+E Pluribus Unix.
+%
+Excusing bad programming is a shooting offence, no matter _what_ the
+circumstances.
+		-- Linus Torvalds
+%
+Every program has at least one bug and can be shortened by at least one
+instruction -- from which, by induction, one can deduce that every
+program can be reduced to one instruction which doesn't work.
+%
+God made machine language; all the rest is the work of man.
+%
+grep me no patterns and I'll tell you no lines.
+%
+How should I know if it works?  That's what beta testers are for.  I
+only coded it.
+		-- Attributed to Linus Torvalds
+%
+I have a very small mind and must live with it.
+		-- E. Dijkstra
+%
+I have never seen anything fill up a vacuum so fast and still suck.
+		-- Rob Pike, on X.
+%
+I would rather spend 10 hours reading someone else's source code than
+10 minutes listening to Musak waiting for technical support which isn't.
+		-- Dr. Greg Wettstein, Roger Maris Cancer Center
+%
+If builders built buildings the way programmers wrote programs,
+then the first woodpecker to come along would destroy civilization.
+%
+If it happens once, it's a bug.
+If it happens twice, it's a feature.
+If it happens more than twice, it's a design philosophy.
+%
+If the code and the comments disagree, then both are probably wrong.
+		-- Norm Schryer
+%
+If you want to travel around the world and be invited to speak at a lot
+of different places, just write a Unix operating system.
+		-- Linus Torvalds
+%
+It is practically impossible to teach good programming style to students
+that have had prior exposure to BASIC: as potential programmers they are
+mentally mutilated beyond hope of regeneration.
+		-- Edsger W. Dijkstra
+%
+It's now the GNU Emacs of all terminal emulators.
+	-- Linus Torvalds, regarding the fact that Linux started as
+	   a terminal emulator
+%
+lp1 on fire
+		-- One of the more obfuscated kernel messages
+%
+Linux is obsolete.
+		-- Andrew Tanenbaum
+%
+Dijkstra probably hates me.
+		-- Linus Torvalds, in kernel/sched.c
+%
+Make each program do one thing well. To do a new job, build afresh
+rather than complicate old programs by adding new "features".
+		-- Doug McIlroy
+%
+MSDOS is not dead, it just smells that way.
+		-- Henry Spencer
+%
+Never trust an operating system you don't have sources for.
+%
+Never underestimate the bandwidth of a station wagon full of tapes.
+		-- Dr. Warren Jackson, Director, UTCS
+%
+On a clear disk you can seek forever.
+%
+Only wimps use tape backup: _real_ men just upload their important stuff
+on ftp, and let the rest of the world mirror it ;)
+		-- Linus Torvalds
+%
+panic("Foooooooood fight!");
+		-- In the kernel source aha1542.c
+%
+People disagree with me.  I just ignore them.
+		-- Linus Torvalds, regarding the use of C++ for the Linux kernel
+%
+Premature optimization is the root of all evil.
+		-- D. E. Knuth
+%
+Real programmers don't comment their code.  It was hard to write, it
+should be hard to understand.
+%
+Remember the good old days, when CPU was singular?
+%
+SCCS, the source motel!  Programs check in and never check out!
+		-- Ken Thompson
+%
+Software is like sex; it's better when it's free.
+		-- Linus Torvalds
+%
+Syntactic sugar causes cancer of the semicolon.
+		-- Epigrams in Programming, ACM SIGPLAN Sept. 1982
+%
+Systems programmers are the high priests of a low cult.
+		-- R. S. Barton
+%
+Testing can show the presence of bugs, but not their absence.
+		-- Dijkstra
+%
+The "C Programming Language" -- A language which combines the flexibility of
+assembly language with the power of assembly language.
+%
+The difference between art and science is that science is what we
+understand well enough to explain to a computer.  Art is everything else.
+		-- Donald Knuth
+%
+The good thing about standards is that there are so many to choose from.
+		-- Andrew S. Tanenbaum
+%
+The memory management on the PowerPC can be used to frighten small children.
+		-- Linus Torvalds
+%
+The only "intuitive" interface is the nipple.  After that, it's all learned.
+		-- Bruce Ediger
+%
+There are two major products that come out of Berkeley: LSD and UNIX.
+We don't believe this to be a coincidence.
+		-- Jeremy S. Anderson
+%
+There are two types of Linux developers - those who can spell, and
+those who can't.  There is a constant pitched battle between the two.
+%
+Those who do not understand Unix are condemned to reinvent it, poorly.
+		-- Henry Spencer
+%
+UNIX was not designed to stop you from doing stupid things, because that
+would also stop you from doing clever things.
+		-- Doug Gwyn
+%
+Unix gives you just enough rope to hang yourself.  And then a couple
+of more feet, just to be sure.
+%
+We all know Linux is great... it does infinite loops in 5 seconds.
+		-- Linus Torvalds
+%
+We are Pentium of Borg.  Division is futile.  You will be approximated.
+%
+When you say "I wrote a program that crashed Windows", people just stare at
+you blankly and say "Hey, I got those with the system, *for free*".
+		-- Linus Torvalds
+%
+This is the Unix philosophy: Write programs that do one thing and do it
+well. Write programs to work together. Write programs to handle text
+streams, because that is a universal interface.
+		-- Doug McIlroy
+%
+Expect the output of every program to become the input to another, as
+yet unknown, program. Don't clutter output with extraneous information.
+		-- Doug McIlroy
+%
+Design and build software, even operating systems, to be tried early,
+ideally within weeks. Don't hesitate to throw away the clumsy parts
+and rebuild them.
+		-- Doug McIlroy
+%
+Even though the UNIX system introduces a number of innovative programs
+and techniques, no single program or idea makes it work well. Instead,
+what makes it effective is the approach to programming, a philosophy of
+using the computer.
+		-- Brian Kernighan and Rob Pike
+%
+Economy and elegance of design due to size constraints
+("salvation through suffering").
+		-- Dennis M. Ritchie and Ken Thompson
+%
+The notion of "intricate and beautiful complexities" is almost an
+oxymoron. Unix programmers vie with each other for "simple and
+beautiful" honors.
+		-- Doug McIlroy
+%
+Worse is better!
+		-- Richard P. Gabriel
+%
+/* You are not expected to understand this. */
+		-- A comment at line 2238 of Unix 6th edition source code
+%
+Rob Pike: "What would you change if you were to do Unix over again?"
+Ken Thompson: "I'd spell creat() with an e."
+%
+You can't trust code that you did not totally create yourself.
+(Especially code from companies that employ people like me).
+		-- Ken Thompson, "Reflections on Trusting Trust", 1983
+%
+Unix and C are the ultimate computer viruses.
+		-- Richard Gabriel, "Worse is better", 1991
+%
+Unix was not only an improvement on its predecessors but also on most
+of its successors.
+		-- Doug McIlroy
+%
+The genius of the Unix pipeline is precisely that it is constructed
+from the very same commands used constantly in simplex fashion. The
+mental leap needed to see this possibility and to invent the notation
+is large indeed.
+		-- Dennis Ritchie
+%
+At some point I realised that I was three weeks from an operating system.
+		-- Ken Thompson
+%
+I didn't fix the tab-in-column-1 because I quickly had a devoted user base of
+more than a dozen people and didn't want to upset them.
+		-- Stu Feldman, on Make
+%
+The number of Unix installations has grown to 10, with more expected.
+		-- "The Unix Programmer's Manual", 2nd edition, June 1972
+%
+    if (argc > 1 && strcmp(argv[1], "-advice") == 0) {
+	printf("Don't Panic!\n");
+	exit(42);
+    }
+		-- Arnold Robbins in LJ, describing RCS
+%
+/*
+ * Oops. The kernel tried to access some bad page. We'll have to
+ * terminate things with extreme prejudice.
+ */
+		-- linux/arch/i386/mm/fault.c
+%
+As usual, this being a 1.3.x release, I haven't even compiled this
+kernel yet.  So if it works, you should be doubly impressed.
+		-- Linus Torvalds, announcing kernel 1.3.3
+%
+Did I test the above macro? Don't be silly. All my code works on first
+try. Except when it doesn't.
+		-- Linus Torvalds
+%
+If I wanted made-up random crap and hallucinations, I'd ask ChatGPT,
+not my filesystem.
+		-- Linus Torvalds
+%
+I still maintain the point that designing a monolithic kernel in 1991 is a
+fundamental error.  Be thankful you are not my student.  You would not get a
+high grade for such a design :-)
+		-- Andrew Tanenbaum to Linus Torvalds
+%
+finlandia:~> apropos win
+win: nothing appropriate.
+%
+Linux: the choice of a GNU generation.
+%
+The linuX Files -- The Source is Out There.
+%
+ASCII a stupid question, you get an EBCDIC answer.
+%
+#if _FP_W_TYPE_SIZE < 32
+#error "Here's a nickel kid.  Go buy yourself a real computer."
+#endif
+		-- linux/arch/sparc64/double.h
+%
+How do I type "for i in *.dvi do xdvi $i done" in a GUI?
+%
+>Ever heard of .cshrc?
+That's a city in Bosnia.  Right?
+%
+Not me, guy.  I read the Bash man page each day like a Jehovah's Witness reads
+the Bible.  No wait, the Bash man page IS the bible.  Excuse me...
+%
+Mastery of UNIX, like mastery of language, offers real freedom.  The
+price of freedom is always dear, but there's no substitute.
+		-- Thomas Scoville
+%
+Some people claim that the UNIX learning curve is steep,
+but at least you only have to climb it once.
+%
+I'd crawl over an acre of 'Visual This++' and 'Integrated Development
+That' to get to gcc, Emacs, and gdb.  Thank you.
+		-- Vance Petree, Virginia Power
+%
+Emacs is a nice operating system, but what it lacks, in order to compete with
+Linux, is a good text editor.
+%
+...Deep Hack Mode -- that mysterious and frightening state of
+consciousness where Mortal Users fear to tread.
+		-- Matt Welsh
+%
+A feature is nothing more than a bug with seniority.
+%
+Make it idiot-proof, and someone will breed a better idiot.
+%
+Computers are like air conditioners.  Both stop working, if you open windows.
+%
+There are 3 kinds of people: those who can count & those who can't.
+%
+The most important design issue... is the fact that Linux is supposed to
+be fun...
+		-- Linus Torvalds
+%
+We knew from experience that the essence of communal computing, as
+supplied by remote-access, time-shared machines, is not just to type
+programs into a terminal instead of a keypunch, but to encourage close
+communication.
+		-- Dennis Ritchie
+%
+About the use of language: it is impossible to sharpen a pencil with a blunt
+ax.  It is equally vain to try to do it with ten blunt axes instead.
+		-- Edsger Dijkstra
+%
+Let the machine do the dirty work.
+		-- Kernighan and Ritchie
+%
+Life would be so much easier if we could just look at the source code.
+		-- Dave Olson
+%
+Never put off till run-time what you can do at compile-time.
+		-- D. Gries
+%
+Loose bits sink chips.
+%
+The goal of Computer Science is to build something that will last at
+least until we've finished building it.
+%
+REST:
+P:      Linus Torvalds
+S:      Buried alive in email
+		-- /usr/src/linux/MAINTAINERS
+%
+Science is to computer science as hydrodynamics is to plumbing.
+%
+Profanity is the one language all programmers know best.
+%
+Old programmers never die, they just branch to a new address.
+%
+If a train station is a place where a train stops, what's a workstation?
+%
+CChheecckk yyoouurr dduupplleexx sswwiittcchh..
+%
+I am not now, nor have I ever been, a member of the demigodic party.
+		-- Dennis Ritchie
+%
+[About grep]
+I had it written but I didn't put it in the central repository of
+programs because I didn't want people to think that I dictated what was
+there. Doug McIlroy said "Wouldn't it be great if we could look for
+things in files?". I said "Let me think about it overnight" and the
+next morning I showed him the program that I had written earlier.
+		-- Ken Thompson, 2019
+%
+UNIX is a footnote of Bell Laboratories.
+		-- Easter egg put into Troff macro package ms by Mike Lesk
+%
+We should have some ways of coupling programs like garden hose -- screw
+in another segment when it becomes necessary to massage data in another way.
+		-- Doug McIlroy's pipe idea, 1964
+%
+The nice thing about Windows is - It does not just crash, it displays a
+dialog box and lets you press 'OK' first.
+		-- Arno Schaefer
+%
+MSDOS didn't get as bad as it is overnight -- it took over ten years
+of careful development.
+%
+World domination.  Fast.
+		-- Linus Torvalds
+%

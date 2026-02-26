@@ -1,7 +1,7 @@
 ---
 title: "Keyboard Restoration"
 description: "Retrobrighting yellowed keycaps and cable repair notes"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ## Retrobrighting the Keycaps

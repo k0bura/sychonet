@@ -374,13 +374,24 @@ const { title, description } = Astro.props;
 
   article img {
     max-width: 100%;
-    height: auto;
     max-height: 300px;
-    object-fit: contain;
+    width: auto;
+    height: auto;
     cursor: zoom-in;
     border: 1px solid #332b00;
-    display: block;
+    display: inline-block;
     margin: 0.5rem 0;
+  }
+
+  article p:has(> img + img) {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  article p:has(> img + img) img {
+    flex: 1;
+    min-width: 0;
   }
 
   .gallery {

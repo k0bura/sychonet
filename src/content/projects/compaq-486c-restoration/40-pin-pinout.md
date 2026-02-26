@@ -1,7 +1,7 @@
 ---
 title: "40-Pin Connector Pinout"
 description: "Pinout reference for the 40-pin TTL LVDS adapter cable"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 Pinout for the 40-pin side of the TTL LVDS adapter cable ([eBay item 173579595077](https://www.ebay.com/itm/173579595077?var=472260346154)).

@@ -27,6 +27,27 @@ import scr10 from '../assets/images/compaq-486c/screen-replacement/10-circuit-cl
 import scr11 from '../assets/images/compaq-486c/screen-replacement/11-video-card-installed.jpg';
 
 import sb01 from '../assets/images/compaq-486c/soundblaster/01-awe32-installed.jpg';
+
+import ov01 from '../assets/images/compaq-486c/overview/01-bbs-login.jpg';
+import ov02 from '../assets/images/compaq-486c/overview/02-side-view.jpg';
+import ov03 from '../assets/images/compaq-486c/overview/03-rear-ports.jpg';
+import ov04 from '../assets/images/compaq-486c/overview/04-badge.jpg';
+import ov05 from '../assets/images/compaq-486c/overview/05-keyboard-restored.jpg';
+import ov06 from '../assets/images/compaq-486c/overview/06-rear-vents.jpg';
+import ov07 from '../assets/images/compaq-486c/overview/07-sysinfo-multimedia.jpg';
+import ov08 from '../assets/images/compaq-486c/overview/08-sysinfo-memory.jpg';
+import ov09 from '../assets/images/compaq-486c/overview/09-wolfenstein3d.jpg';
+
+import cpu05 from '../assets/images/compaq-486c/cpu-upgrade/05-chkcpu.jpg';
+
+import kb01 from '../assets/images/compaq-486c/keyboard/01-keyboard-disassembled.jpg';
+
+import gc01 from '../assets/images/gridcase-1520/finished/01-closed.jpg';
+import gc02 from '../assets/images/gridcase-1520/finished/02-bios-post.jpg';
+import gc03 from '../assets/images/gridcase-1520/finished/03-wimodem.jpg';
+import gc04 from '../assets/images/gridcase-1520/finished/04-grid-splash.jpg';
+import gc05 from '../assets/images/gridcase-1520/finished/05-gotek-closeup.jpg';
+import gc06 from '../assets/images/gridcase-1520/finished/06-rogue.jpg';
 ---
 
 <Base title="Photo Archive - sych0net" description="Photo archive">
@@ -37,7 +58,17 @@ import sb01 from '../assets/images/compaq-486c/soundblaster/01-awe32-installed.j
 
   <article>
     <h2>Compaq Portable 486c</h2>
-    <Gallery images={[{ src: header, alt: "Compaq Portable 486c" }]} />
+    <Gallery images={[
+      { src: header, alt: "Compaq Portable 486c" },
+      { src: ov01, alt: "BBS login on Compaq 486c" },
+      { src: ov09, alt: "Wolfenstein 3D running" },
+      { src: ov02, alt: "Side view with expansion ports" },
+      { src: ov03, alt: "Rear ports closeup" },
+      { src: ov04, alt: "Compaq Portable 486c badge" },
+      { src: ov06, alt: "Rear vents and floppy drive" },
+      { src: ov07, alt: "MSD system info — multimedia" },
+      { src: ov08, alt: "MSD system info — memory" },
+    ]} />
 
     <h3>Screen Replacement</h3>
     <Gallery images={[
@@ -60,6 +91,7 @@ import sb01 from '../assets/images/compaq-486c/soundblaster/01-awe32-installed.j
       { src: cpu02, alt: "AMD Am5x86-P75 ADZ" },
       { src: cpu03, alt: "AMD Am5x86-P75 ADW" },
       { src: cpu04, alt: "Am5x86 installed" },
+      { src: cpu05, alt: "CHKCPU showing AMD Am5x86 at 134 MHz" },
     ]} />
 
     <h3>PSU Rebuild</h3>
@@ -72,6 +104,22 @@ import sb01 from '../assets/images/compaq-486c/soundblaster/01-awe32-installed.j
 
     <h3>Sound Blaster AWE32</h3>
     <Gallery images={[{ src: sb01, alt: "AWE32 installed" }]} />
+
+    <h3>Keyboard Restoration</h3>
+    <Gallery images={[
+      { src: kb01, alt: "Keyboard disassembled during restoration" },
+      { src: ov05, alt: "Keyboard restored with retrobrighted keycaps" },
+    ]} />
+
+    <h2 id="gridcase-1520">GRiDCASE 1520</h2>
+    <Gallery images={[
+      { src: gc04, alt: "GRiD splash screen on plasma display" },
+      { src: gc01, alt: "GRiDCASE 1520 closed" },
+      { src: gc02, alt: "BIOS POST on plasma display" },
+      { src: gc03, alt: "WiModem232 Pro on serial port" },
+      { src: gc05, alt: "Gotek floppy emulator closeup" },
+      { src: gc06, alt: "Rogue running on plasma display" },
+    ]} />
   </article>
 
   <p><a href="/">&larr; back to main [ESC]</a></p>

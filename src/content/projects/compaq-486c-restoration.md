@@ -1,10 +1,11 @@
 ---
 title: "Compaq Portable 486c Restoration"
 description: "Full restoration of a 1994 Compaq Portable 486c/66 luggable PC"
-date: 2026-02-21
+date: 2024-10-18
 ---
 
 ![Compaq Portable 486c](../../assets/images/compaq-486c/compaq-486c-header.jpg)
+![BBS login on Compaq 486c](../../assets/images/compaq-486c/overview/01-bbs-login.jpg)
 
 A documentation project tracking the restoration of a Compaq Portable 486c/66 — a luggable 486-era PC with a built-in 10.4" TFT display.
 
@@ -44,6 +45,9 @@ The keycaps had the typical vintage yellowing from UV-degraded ABS plastic. I re
 
 The keyboard cable is a very proprietary connector and becomes brittle with age. Mine was damaged but still usable after taping it up. A custom coiled replacement cable is planned.
 
+![Keyboard disassembled during restoration](../../assets/images/compaq-486c/keyboard/01-keyboard-disassembled.jpg)
+![Keyboard restored with retrobrighted keycaps](../../assets/images/compaq-486c/overview/05-keyboard-restored.jpg)
+
 **[Full keyboard restoration documentation →](/projects/compaq-486c-restoration/keyboard/)**
 
 ### 4. Hard Drive Replacement (Future)
@@ -60,6 +64,8 @@ But until that drive actually dies, I refuse to fix what isn't broken. I will no
 
 The original IBM Blue Lightning DX2-66 was replaced with an **AMD Am5x86-P75** (AMD-X5-133ADZ), a drop-in Socket 3 upgrade that delivers Pentium-75 equivalent performance at 133 MHz. The ADZ variant was chosen for its 85°C maximum case temperature rating — critical for this compact case where only a passive heatsink fits. The Compaq has no clock multiplier jumper, so pin R17 (CLKMUL) on the CPU had to be manually grounded to enable the 4x multiplier and reach full 133 MHz speed.
 
+![CHKCPU showing AMD Am5x86 at 134 MHz](../../assets/images/compaq-486c/cpu-upgrade/05-chkcpu.jpg)
+
 **[Full CPU upgrade documentation →](/projects/compaq-486c-restoration/cpu/)**
 
 ### EISA Expansion
@@ -69,6 +75,8 @@ The Compaq Portable 486c has two EISA card slots — not a lot of real estate, s
 #### Sound Blaster AWE32 IDE/MKP CSP (CT3900)
 
 The Compaq has no onboard audio, so one EISA slot is dedicated to a **Creative Sound Blaster AWE32 (CT3900)**. This gives full Sound Blaster and AdLib compatibility for DOS games, OPL3 FM synthesis, and the EMU8000 wavetable synthesizer with 512 KB onboard sample RAM. The CT3900 was chosen specifically because it is not Plug and Play — in 1994, "Plug and Play" mostly meant "Plug and Pray." The CT3900 uses jumpers, works at boot, no drama!
+
+![MSD system info — multimedia](../../assets/images/compaq-486c/overview/07-sysinfo-multimedia.jpg)
 
 **[Full Sound Blaster documentation →](/projects/compaq-486c-restoration/soundblaster/)**
 
@@ -86,6 +94,9 @@ Currently installed:
 Previously I used a Xircom RealPort Ethernet 10/100 (RE-100), but it hogged both slots. Greedy.
 
 **[Full PCMCIA adapter documentation →](/projects/compaq-486c-restoration/pcmcia/)**
+
+![Wolfenstein 3D running](../../assets/images/compaq-486c/overview/09-wolfenstein3d.jpg)
+![MSD system info — memory](../../assets/images/compaq-486c/overview/08-sysinfo-memory.jpg)
 
 ---
 
