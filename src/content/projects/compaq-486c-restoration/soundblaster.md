@@ -6,17 +6,17 @@ date: 2024-10-18
 
 ## Creative Sound Blaster AWE32 IDE/MKP CSP (CT3900)
 
-The Compaq Portable 486c has no onboard audio, so one of the two EISA slots is used for a **Creative Sound Blaster AWE32 IDE/MKP CSP (CT3900)**. The AWE32 is one of the best ISA sound cards ever made — it provides Sound Blaster and AdLib compatibility for DOS games, a Yamaha OPL3 FM synthesizer (YMF262), and Creative's EMU8000 wavetable synthesizer with 512 KB of onboard sample RAM (expandable to 28 MB via SIMMs).
+No onboard audio, so one of the two EISA slots goes to a **Creative Sound Blaster AWE32 IDE/MKP CSP (CT3900)**. One of the best ISA sound cards ever made. Sound Blaster and AdLib compatibility, Yamaha OPL3 FM synth (YMF262), Creative's EMU8000 wavetable with 512 KB sample RAM (expandable to 28 MB via SIMMs).
 
-Pentium-class CPU, wavetable audio, DOOM at full speed — at some point this stopped being a restoration and started being the 486 gaming machine 12-year-old me always wanted.
+Pentium-class CPU, wavetable audio, DOOM at full speed. At some point this stopped being a restoration and started being the 486 gaming machine 12-year-old me always wanted.
 
-The CT3900 variant includes an IDE interface and a CSP (Creative Signal Processor) socket, though neither is used in this build — the Compaq already has an IDE controller on the backplane.
+CT3900 has an IDE interface and CSP socket too, but I don't use either. Compaq already has IDE on the backplane.
 
 ### Why the CT3900
 
-The CT3900 was chosen specifically because it is **not Plug and Play**. Later AWE32 and AWE64 revisions switched to ISA PnP, which requires a PnP-aware BIOS or software like Intel's ICU to assign resources. The Compaq Portable 486c's BIOS has no PnP support, so a PnP sound card would need extra configuration tools and drivers loaded before it works — and can still be unreliable under plain DOS.
+Went with the CT3900 because it's **not Plug and Play**. Later AWE32 and AWE64 revisions use ISA PnP, which needs a PnP-aware BIOS or Intel's ICU to assign resources. My Compaq's BIOS doesn't do PnP, and I didn't want to mess with configuration utilities just to get sound working.
 
-The CT3900 uses **jumpers** to set IRQ, DMA, and I/O port addresses directly on the card. It works immediately at boot with no BIOS support, no TSRs, and no configuration utilities required. For a DOS gaming machine, this is the most reliable setup — the card is configured once with jumpers and just works every time.
+CT3900 uses **jumpers**. Set the IRQ, DMA, I/O port right on the card. Works at boot. No BIOS support needed, no TSRs, no setup utilities. Set it once, done. Moving on.
 
 ![Sound Blaster AWE32 installed in the Compaq Portable 486c](../../../assets/images/compaq-486c/soundblaster/01-awe32-installed.jpg)
 

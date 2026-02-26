@@ -6,7 +6,7 @@ date: 2024-10-18
 
 ## Overview
 
-The SCM ISAC2PR10 (FCC ID: MBPSCM-SBI-C2P, also marketed as the SCM SwapBox SBI-C2P) is a 16-bit ISA card that adds two PCMCIA (PC Card) slots to desktop machines. Installing it in the Compaq Portable 486c opens up the wide ecosystem of 1990s PC Cards — network adapters, flash storage, modems, SCSI controllers, and more — all designed for laptops of the era.
+SCM ISAC2PR10 (FCC ID: MBPSCM-SBI-C2P, also sold as the SCM SwapBox SBI-C2P). 16-bit ISA card, adds two PCMCIA slots. Threw one in my Compaq to get access to the whole ecosystem of 1990s PC Cards -- WiFi, flash storage, modems, SCSI, you name it. Nobody said a 25-pound luggable couldn't crash the laptop party.
 
 ## Card Specifications
 
@@ -30,9 +30,9 @@ The SCM ISAC2PR10 (FCC ID: MBPSCM-SBI-C2P, also marketed as the SCM SwapBox SBI-
 
 ## 16-Bit PCMCIA vs 32-Bit CardBus
 
-This adapter uses the original **PCMCIA Release 2.x** standard with a **16-bit data bus** (Intel 82365SL-compatible via the Vadem VG-469). This is the earlier ISA-based PCMCIA interface — not the 32-bit CardBus (PCMCIA 5.0) that became common in mid-to-late '90s laptops. CardBus is PCI-based and supports up to 132 MB/s, while 16-bit PCMCIA tops out around 20 MB/s.
+Uses **PCMCIA Release 2.x** with a **16-bit data bus** (Vadem VG-469, Intel 82365SL-compatible). Not 32-bit CardBus (PCMCIA 5.0) -- that's PCI-based, up to 132 MB/s. 16-bit tops out at ~20 MB/s.
 
-In practice, 16-bit PCMCIA is plenty for the peripherals used here — WiFi adapters, CF storage, network cards, and modems all work fine. The bandwidth limitation only matters for high-throughput 32-bit CardBus devices designed for later laptops. A 32-bit CardBus card physically cannot be inserted into a 16-bit slot due to a different keying notch.
+Plenty for what I'm doing. WiFi, CF storage, network cards, modems -- all fine. Bandwidth only matters for 32-bit CardBus devices, and those physically won't fit anyway (different keying notch).
 
 ## Installation
 
@@ -40,7 +40,7 @@ Just install it into the ISA slot!
 
 ## Driver Setup
 
-DOS: Tricky because there were different releases supporting different hardware. Finally got this working: [SystemSoft CardSoft Version 3.1](https://archive.org/details/cardsoft-v-3-1) with hot swapping!
+DOS was tricky because there were different CardSoft releases supporting different hardware. I went through a few dead ends before I finally got this working: [SystemSoft CardSoft Version 3.1](https://archive.org/details/cardsoft-v-3-1) -- hot swapping and everything!
 
 Windows 3.1: [SystemSoft CardSoft v3.1 & CardView for Windows 3.1](https://archive.org/details/simpletechnology_pcmcia21cardsocket_systemsoftcardsoftv31_cardview)
 

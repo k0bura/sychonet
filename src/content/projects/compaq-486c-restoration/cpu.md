@@ -4,21 +4,21 @@ description: "Upgrading from IBM Blue Lightning DX2-66 to AMD Am5x86-P75 at 133 
 date: 2024-10-18
 ---
 
-## Original CPU — IBM Blue Lightning DX2
+## Original CPU -- IBM Blue Lightning DX2
 
-The Compaq Portable 486c I had came with an **IBM Blue Lightning DX2** (486-V266GA) processor. This is a clock-doubled 486-class CPU running at 66 MHz (33 MHz bus, 2x multiplier). This Compaq wasn't branded as the 66 MHz model, so it must have been upgraded at some point. The Blue Lightning was IBM's own take on the 486 architecture — it uses a write-back 16 KB internal cache and is pin-compatible with the Intel 486DX2-66.
+Mine came with an **IBM Blue Lightning DX2** (486-V266GA). Clock-doubled 486, 66 MHz (33 MHz bus, 2x multiplier). Machine wasn't branded as the 66 MHz model so someone upgraded it before I got it. The Blue Lightning was IBM's own 486 -- write-back 16 KB internal cache, pin-compatible with the Intel 486DX2-66.
 
 ![Original IBM Blue Lightning DX2 on the Compaq motherboard](../../../assets/images/compaq-486c/cpu-upgrade/01-original-cpu.jpg)
 
-## Upgrade — AMD Am5x86-P75 (AMD-X5-133ADZ)
+## Upgrade -- AMD Am5x86-P75 (AMD-X5-133ADZ)
 
-The Am5x86 is a drop-in Socket 3 upgrade that delivers Pentium-75 equivalent performance (hence the "P75" marketing name) while remaining fully compatible with 486 motherboards. It runs at 133 MHz using a 4x internal clock multiplier on a 33 MHz bus, features a 16 KB write-back L1 cache, and draws only ~3W. See [AM5x86 Datasheet (PDF)](/docs/compaq-486c/AM5x86_Datasheet.pdf).
+Drop-in Socket 3 upgrade. Pentium-75 equivalent performance (hence "P75"), fully compatible with 486 motherboards. 133 MHz on a 4x multiplier off the 33 MHz bus, 16 KB write-back L1 cache, only ~3W. See [AM5x86 Datasheet (PDF)](/docs/compaq-486c/AM5x86_Datasheet.pdf).
 
 ![AMD Am5x86-P75 ADZ variant](../../../assets/images/compaq-486c/cpu-upgrade/02-am5x86-adz.jpg)
 
 ### Why the ADZ Variant
 
-The Am5x86 came in several variants, all running at 133 MHz but with different maximum case temperature ratings:
+Several variants, all 133 MHz but with different max case temp ratings:
 
 | Variant | Part Number | Max Case Temp | Notes |
 |---------|-------------|---------------|-------|
@@ -26,13 +26,13 @@ The Am5x86 came in several variants, all running at 133 MHz but with different m
 | **ADY** | AMD-X5-133ADY | 75° C | Mid-range thermal rating, rare |
 | **ADZ** | AMD-X5-133ADZ | 85° C | Later production, preferred for compact builds |
 
-The **ADZ is the right choice for the Compaq Portable 486c** because the compact luggable case has very limited airflow and no room for a CPU fan — only a heatsink will fit. The ADW's 55°C limit could easily be exceeded in this enclosure, while the ADZ's 85°C rating provides comfortable thermal headroom for passive cooling.
+**ADZ is the one I need.** Compact case, limited airflow, no room for a fan -- heatsink only. ADW's 55°C limit would get exceeded easy. ADZ's 85°C gives me plenty of headroom on passive cooling.
 
-You can see the difference on the chips themselves — the ADW is stamped "HEATSINK AND FAN REQD" while the ADZ has no such warning:
+You can see it on the chips -- ADW is stamped "HEATSINK AND FAN REQD", ADZ has no such warning:
 
-![AMD Am5x86-P75 ADW variant — note HEATSINK AND FAN REQD](../../../assets/images/compaq-486c/cpu-upgrade/03-am5x86-adw.jpg)
+![AMD Am5x86-P75 ADW variant -- note HEATSINK AND FAN REQD](../../../assets/images/compaq-486c/cpu-upgrade/03-am5x86-adw.jpg)
 
-The temperature suffix also hints at the chip's true capability. Enthusiasts found that the suffix corresponds to the speed the chip was actually designed to support:
+The suffix also hints at what the chip can actually do. Enthusiasts figured out it corresponds to the real designed speed:
 
 | Suffix | Marketed Speed | Actual Capability |
 |--------|---------------|-------------------|
@@ -40,21 +40,21 @@ The temperature suffix also hints at the chip's true capability. Enthusiasts fou
 | ADY | 133 MHz | 150 MHz (50 x 3) |
 | ADZ | 133 MHz | 160 MHz (40 x 4) |
 
-AMD never officially released a 160 MHz part because they felt it would cannibalize sales of their upcoming Pentium-class K5 (a.k.a. 5K86) processor. The K5 ended up being a total flop, and most people who bought the ADZ "133 MHz" ran it at 160 MHz anyway.
+AMD never released a 160 MHz part -- feared it would cannibalize their upcoming K5 (5K86). The K5 ended up being a total flop. Most people who bought the ADZ "133 MHz" ran it at 160 MHz anyway.
 
 ![AMD Am5x86-P75 ADZ installed on the Compaq Portable 486c motherboard](../../../assets/images/compaq-486c/cpu-upgrade/04-am5x86-installed.jpg)
 
-### Enabling the 4x Multiplier — CLKMUL Pin R17
+### Enabling the 4x Multiplier -- CLKMUL Pin R17
 
-Socket 3 was designed for 486-class processors that only supported 2x and 3x clock multipliers. AMD cleverly engineered the Am5x86 to reinterpret the 2x multiplier setting as 4x internally. The multiplier is controlled by the **CLKMUL pin** at position **R-17** on the 168-pin PGA package:
+Socket 3 only supported 2x and 3x multipliers. AMD made the Am5x86 reinterpret 2x as 4x internally. Controlled by **CLKMUL pin R-17** on the 168-pin PGA:
 
 | CLKMUL (R17) State | Multiplier |
 |---------------------|-----------|
 | High (Vcc) or floating | 3x (99 MHz on 33 MHz bus) |
 | Low (Vss / ground) | 4x (133 MHz on 33 MHz bus) |
 
-On motherboards with a clock multiplier jumper, you simply set it to "2x" — the board grounds pin R17, and the Am5x86 internally quadruples the clock instead. **The Compaq Portable 486c has no multiplier jumper**, so the CLKMUL pin floats and the CPU defaults to 3x (99 MHz) — noticeably slower than its full 133 MHz.
+On boards with a multiplier jumper, set it to "2x" and pin R17 gets grounded -- Am5x86 quadruples instead. **My Compaq has no multiplier jumper.** Pin floats, CPU defaults to 3x (99 MHz).
 
-The fix is to **manually ground pin R17** on the CPU. I soldered a thin wire from pin R17 to a nearby Vss (ground) pin directly on the chip. Without this mod, the CPU will boot and run but only at 99 MHz.
+Fix: **manually ground pin R17.** Soldered a thin wire from R17 to a nearby Vss pin on the chip. Without this the CPU boots fine but only runs at 99 MHz. Spent a while confused about the benchmarks before I figured it out.
 
 **TODO:** Add photo of the R17 pin ground mod.

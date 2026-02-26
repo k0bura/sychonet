@@ -6,7 +6,7 @@ date: 2026-02-24
 
 ## Overview
 
-The Data I/O 201 is a standalone EPROM programmer manufactured by Data I/O Corporation in the early 1980s. It programs the standard NMOS and CMOS EPROM families — 2716, 2732, 2732A, 2764, 27128, and 27256 — without requiring a host computer.
+The Data I/O 201 is a standalone EPROM programmer manufactured by Data I/O Corporation in the early 1980s. It programs the standard NMOS and CMOS EPROM families -- 2716, 2732, 2732A, 2764, 27128, and 27256 -- without requiring a host computer.
 
 For when you need to burn a ROM one byte at a time, by hand, on a Tuesday night, because the UV eraser just finished its 20-minute cycle and you've got five more chips to go. No drag-and-drop. No progress bar. Just you, a hex keypad, and the quiet hum of a ZIF socket doing exactly what it was told. This is how firmware was shipped in 1984.
 

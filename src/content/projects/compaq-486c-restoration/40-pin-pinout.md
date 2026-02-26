@@ -12,14 +12,14 @@ Pinout for the 40-pin side of the TTL LVDS adapter cable ([eBay item 17357959507
 | 2 | LCD-VDD | Power | Power for Panel |
 | 3 | LCD-VDD | Power | Power for Panel |
 | 4 | LCD-VDD | Power | Power for Panel |
-| 5 | GND | Ground | — |
-| 6 | GND | Ground | — |
+| 5 | GND | Ground | -- |
+| 6 | GND | Ground | -- |
 | 7 | D-VSYNC | O | Display Vertical Sync for Panel |
-| 8 | GND | Ground | — |
+| 8 | GND | Ground | -- |
 | 9 | D-HSYNC | O | Display Horizontal Sync for Panel |
-| 10 | GND | Ground | — |
+| 10 | GND | Ground | -- |
 | 11 | D-DE | O | Display Data Enable for Panel |
-| 12 | GND | Ground | — |
+| 12 | GND | Ground | -- |
 | 13 | RA0 | O | Display Port A Red Output Bit 0 |
 | 14 | RA1 | O | Display Port A Red Output Bit 1 |
 | 15 | RA2 | O | Display Port A Red Output Bit 2 |
@@ -28,7 +28,7 @@ Pinout for the 40-pin side of the TTL LVDS adapter cable ([eBay item 17357959507
 | 18 | RA5 | O | Display Port A Red Output Bit 5 |
 | 19 | RA6 | O | Display Port A Red Output Bit 6 |
 | 20 | RA7 | O | Display Port A Red Output Bit 7 |
-| 21 | GND | Ground | — |
+| 21 | GND | Ground | -- |
 | 22 | GA0 | O | Display Port A Green Output Bit 0 |
 | 23 | GA1 | O | Display Port A Green Output Bit 1 |
 | 24 | GA2 | O | Display Port A Green Output Bit 2 |
@@ -37,7 +37,7 @@ Pinout for the 40-pin side of the TTL LVDS adapter cable ([eBay item 17357959507
 | 27 | GA5 | O | Display Port A Green Output Bit 5 |
 | 28 | GA6 | O | Display Port A Green Output Bit 6 |
 | 29 | GA7 | O | Display Port A Green Output Bit 7 |
-| 30 | GND | Ground | — |
+| 30 | GND | Ground | -- |
 | 31 | BA0 | O | Display Port A Blue Output Bit 0 |
 | 32 | BA1 | O | Display Port A Blue Output Bit 1 |
 | 33 | BA2 | O | Display Port A Blue Output Bit 2 |
@@ -46,5 +46,5 @@ Pinout for the 40-pin side of the TTL LVDS adapter cable ([eBay item 17357959507
 | 36 | BA5 | O | Display Port A Blue Output Bit 5 |
 | 37 | BA6 | O | Display Port A Blue Output Bit 6 |
 | 38 | BA7 | O | Display Port A Blue Output Bit 7 |
-| 39 | GND | Ground | — |
+| 39 | GND | Ground | -- |
 | 40 | D-SHCLK | O | Display Clock for Panel |
