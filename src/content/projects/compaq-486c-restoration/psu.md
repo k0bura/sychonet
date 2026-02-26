@@ -12,7 +12,7 @@ The original power supply in the Compaq Portable 486c is a common failure point.
 
 The PSU board was removed from its enclosure and all electrolytic capacitors were replaced. The board was cleaned of any electrolyte residue before installing the new caps.
 
-![PSU board removed and recapped on the workbench](/images/compaq-486c/psu-rebuild/01-psu-board-recapped.jpg)
+![PSU board removed and recapped on the workbench](../../../assets/images/compaq-486c/psu-rebuild/01-psu-board-recapped.jpg)
 
 ## Voltage Verification
 
@@ -20,14 +20,14 @@ After recapping, the PSU was tested with a multimeter to verify clean output on 
 
 **12V rail** — Reading 12.11V, well within spec.
 
-![Multimeter reading 12.11V on the 12V rail](/images/compaq-486c/psu-rebuild/02-12v-rail-test.jpg)
+![Multimeter reading 12.11V on the 12V rail](../../../assets/images/compaq-486c/psu-rebuild/02-12v-rail-test.jpg)
 
 **5V rail** — Reading 5.085V, well within spec.
 
-![Multimeter reading 5.085V on the 5V rail](/images/compaq-486c/psu-rebuild/03-5v-rail-test.jpg)
+![Multimeter reading 5.085V on the 5V rail](../../../assets/images/compaq-486c/psu-rebuild/03-5v-rail-test.jpg)
 
 ## Reassembly
 
 The rebuilt PSU board reinstalled in its metal enclosure, ready to go back into the case.
 
-![Rebuilt PSU reassembled in its enclosure](/images/compaq-486c/psu-rebuild/04-psu-reassembled.jpg)
+![Rebuilt PSU reassembled in its enclosure](../../../assets/images/compaq-486c/psu-rebuild/04-psu-reassembled.jpg)

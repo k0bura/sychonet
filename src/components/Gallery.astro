@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  images: { src: ImageMetadata; alt: string }[];
+}
+
+const { images } = Astro.props;
+---
+
+<div class="gallery">
+  {images.map((img) => (
+    <Image
+      src={img.src}
+      alt={img.alt}
+      width={200}
+      format="webp"
+      data-full={img.src.src}
+    />
+  ))}
+</div>

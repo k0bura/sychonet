@@ -18,7 +18,7 @@ The CT3900 was chosen specifically because it is **not Plug and Play**. Later AW
 
 The CT3900 uses **jumpers** to set IRQ, DMA, and I/O port addresses directly on the card. It works immediately at boot with no BIOS support, no TSRs, and no configuration utilities required. For a DOS gaming machine, this is the most reliable setup — the card is configured once with jumpers and just works every time.
 
-![Sound Blaster AWE32 installed in the Compaq Portable 486c](/images/compaq-486c/soundblaster/01-awe32-installed.jpg)
+![Sound Blaster AWE32 installed in the Compaq Portable 486c](../../../assets/images/compaq-486c/soundblaster/01-awe32-installed.jpg)
 
 See [AWE32 Getting Started Guide (PDF)](/docs/compaq-486c/AWE32_Getting_Started.pdf) for the original Creative manual (v1.4, December 1996).
 

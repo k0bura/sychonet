@@ -77,7 +77,7 @@ Key wiring notes:
 
 The replacement display has a standard 31-pin TTL interface, but the Compaq's video card outputs through its proprietary undocumented 30-pin ribbon cable — there's no way to plug one into the other directly. Rather than hand-soldering 30 individual wires, I used a **40-pin to 31-pin TTL LVDS cable with a breakout board** ([eBay item 173579595077](https://www.ebay.com/itm/173579595077?var=472260346154)). I could have custom made one for exactly 30 pins we need, but this worked and is off the shelf. The 31-pin end plugs directly into the new display, and the breakout board on the other end has header pins that can be soldered to the Compaq's original 30-pin ribbon cable connector. This bridges the proprietary Compaq interface to the standard display connector cleanly and reliably.
 
-![Adapter board](/images/compaq-486c/screen-replacement/01-adapter-board.jpg)
+![Adapter board](../../../assets/images/compaq-486c/screen-replacement/01-adapter-board.jpg)
 
 **[Full 40-pin connector pinout →](/projects/compaq-486c-restoration/40-pin-pinout/)**
 
@@ -93,13 +93,13 @@ The original display used H-Sync and V-Sync directly to know when to start drawi
 
 Modern replacement displays don't use H-Sync for pixel positioning - they require a **Data Enable (DE)** signal that goes high during the active display period. The new display also expects pixel data to begin at clock cycle 104. Since the Compaq's video card sends pixel data starting at clock 144, we need to delay the DE signal by exactly 40 clock cycles (approximately 1.58 µs at 25.175 MHz) to align the image.
 
-![DOS boot showing the horizontal shift caused by the H-Sync mismatch](/images/compaq-486c/screen-replacement/02-dos-boot-test.jpg)
+![DOS boot showing the horizontal shift caused by the H-Sync mismatch](../../../assets/images/compaq-486c/screen-replacement/02-dos-boot-test.jpg)
 
 ### RC Delay Approach
 
 The circuit uses a simple RC (resistor-capacitor) delay network sandwiched between two inverter stages. The BLANK* signal from the RAMDAC is active-low during the blanking interval — when BLANK* is high, the display is in the active region (see Tables 4-6 in the Bt471 datasheet). It gets inverted, delayed through the RC network, then inverted again to produce a properly timed DE output.
 
-![RC delay schematic](/images/compaq-486c/screen-replacement/08-rc-delay-schematic.png)
+![RC delay schematic](../../../assets/images/compaq-486c/screen-replacement/08-rc-delay-schematic.png)
 
 The delay is determined by the RC time constant: **τ = R × C**. With a 10 kΩ trimmer pot and a 22 pF capacitor, the adjustable range covers the ~1.58 µs delay needed. Turning the trimmer shifts the image left or right on the display, pixel by pixel.
 
@@ -107,7 +107,7 @@ The delay is determined by the RC time constant: **τ = R × C**. With a 10 kΩ 
 
 The **SN74AS02N** is a quad 2-input NOR gate IC. A NOR gate with both inputs tied together acts as an inverter (any high input → low output). We use two of the four available gates as the two inverter stages in the delay circuit. The other two gates are unused (inputs tied to GND per standard practice).
 
-![74AS02 wiring diagram — top/bottom pin views and logic diagram](/images/compaq-486c/screen-replacement/09-74as02-wiring-diagram.png)
+![74AS02 wiring diagram — top/bottom pin views and logic diagram](../../../assets/images/compaq-486c/screen-replacement/09-74as02-wiring-diagram.png)
 
 The diagram above shows the physical wiring on the video card. The 74AS02 is soldered dead-bug style (upside down) directly onto the video card PCB. Key connections:
 
@@ -144,7 +144,7 @@ For +5V and GND, I used a multimeter to probe the video card's components to fin
 
 I placed the components down at the bottom where there is airflow from the case exhaust fan (after it's installed).
 
-![Close-up of 74AS02 circuit on the video card](/images/compaq-486c/screen-replacement/10-circuit-closeup.jpg)
+![Close-up of 74AS02 circuit on the video card](../../../assets/images/compaq-486c/screen-replacement/10-circuit-closeup.jpg)
 
 My PSU was already rebuilt, so I had a clean, stable 5V rail available to power the 74AS02 directly. This simplified my build compared to the DOSReloaded approach, where the author tapped 12V and regulated it down with an LM78L05 because his 5V rail had too much ripple.
 
@@ -158,11 +158,11 @@ My PSU was already rebuilt, so I had a clean, stable 5V rail available to power 
 - 220 nF bypass cap directly across the IC power pins is mandatory (not in my pics, it was added later)
 - Mount the IC away from heat sources; temperature drift can shift the image up to 4 pixels
 
-![Delay circuit prototyped on breadboard](/images/compaq-486c/screen-replacement/04-delay-circuit-breadboard.jpg)
+![Delay circuit prototyped on breadboard](../../../assets/images/compaq-486c/screen-replacement/04-delay-circuit-breadboard.jpg)
 
-![Video card with 74AS02 and BLANK tap wires installed](/images/compaq-486c/screen-replacement/06-video-card-modifications.jpg)
+![Video card with 74AS02 and BLANK tap wires installed](../../../assets/images/compaq-486c/screen-replacement/06-video-card-modifications.jpg)
 
-![Modified video card installed in the Compaq chassis](/images/compaq-486c/screen-replacement/11-video-card-installed.jpg)
+![Modified video card installed in the Compaq chassis](../../../assets/images/compaq-486c/screen-replacement/11-video-card-installed.jpg)
 
 ## Backlight
 
@@ -182,9 +182,9 @@ The replacement LQ104V1DG51 is physically much smaller than the original LQ10D01
 
 ## Results
 
-![VGA graphics mode test — 640×480, 16 colors](/images/compaq-486c/screen-replacement/03-graphics-mode-test.jpg)
+![VGA graphics mode test — 640×480, 16 colors](../../../assets/images/compaq-486c/screen-replacement/03-graphics-mode-test.jpg)
 
-![DOOM running on the restored Compaq](/images/compaq-486c/screen-replacement/05-doom-running.jpg)
+![DOOM running on the restored Compaq](../../../assets/images/compaq-486c/screen-replacement/05-doom-running.jpg)
 
 *It's not a vintage computing project until you run DOOM on it. I don't make the rules - the retro community bylaws are very clear on this. No DOOM screenshot, no credibility.*
 

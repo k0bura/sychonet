@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import Gallery from '../components/Gallery.astro';
+
+import header from '../assets/images/compaq-486c/compaq-486c-header.jpg';
+
+import cpu01 from '../assets/images/compaq-486c/cpu-upgrade/01-original-cpu.jpg';
+import cpu02 from '../assets/images/compaq-486c/cpu-upgrade/02-am5x86-adz.jpg';
+import cpu03 from '../assets/images/compaq-486c/cpu-upgrade/03-am5x86-adw.jpg';
+import cpu04 from '../assets/images/compaq-486c/cpu-upgrade/04-am5x86-installed.jpg';
+
+import psu01 from '../assets/images/compaq-486c/psu-rebuild/01-psu-board-recapped.jpg';
+import psu02 from '../assets/images/compaq-486c/psu-rebuild/02-12v-rail-test.jpg';
+import psu03 from '../assets/images/compaq-486c/psu-rebuild/03-5v-rail-test.jpg';
+import psu04 from '../assets/images/compaq-486c/psu-rebuild/04-psu-reassembled.jpg';
+
+import scr01 from '../assets/images/compaq-486c/screen-replacement/01-adapter-board.jpg';
+import scr02 from '../assets/images/compaq-486c/screen-replacement/02-dos-boot-test.jpg';
+import scr03 from '../assets/images/compaq-486c/screen-replacement/03-graphics-mode-test.jpg';
+import scr04 from '../assets/images/compaq-486c/screen-replacement/04-delay-circuit-breadboard.jpg';
+import scr05 from '../assets/images/compaq-486c/screen-replacement/05-doom-running.jpg';
+import scr06 from '../assets/images/compaq-486c/screen-replacement/06-video-card-modifications.jpg';
+import scr07 from '../assets/images/compaq-486c/screen-replacement/07-internals-overview.jpg';
+import scr08 from '../assets/images/compaq-486c/screen-replacement/08-rc-delay-schematic.png';
+import scr09 from '../assets/images/compaq-486c/screen-replacement/09-74as02-wiring-diagram.png';
+import scr10 from '../assets/images/compaq-486c/screen-replacement/10-circuit-closeup.jpg';
+import scr11 from '../assets/images/compaq-486c/screen-replacement/11-video-card-installed.jpg';
+
+import sb01 from '../assets/images/compaq-486c/soundblaster/01-awe32-installed.jpg';
+---
+
+<Base title="Photo Archive - sych0net" description="Photo archive">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ PHOTO ARCHIVE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <article>
+    <h2>Compaq Portable 486c</h2>
+    <Gallery images={[{ src: header, alt: "Compaq Portable 486c" }]} />
+
+    <h3>Screen Replacement</h3>
+    <Gallery images={[
+      { src: scr01, alt: "Adapter board" },
+      { src: scr02, alt: "DOS boot test" },
+      { src: scr03, alt: "VGA graphics mode test" },
+      { src: scr04, alt: "Delay circuit on breadboard" },
+      { src: scr05, alt: "DOOM running" },
+      { src: scr06, alt: "Video card modifications" },
+      { src: scr07, alt: "Internals overview" },
+      { src: scr08, alt: "RC delay schematic" },
+      { src: scr09, alt: "74AS02 wiring diagram" },
+      { src: scr10, alt: "Circuit closeup" },
+      { src: scr11, alt: "Video card installed" },
+    ]} />
+
+    <h3>CPU Upgrade</h3>
+    <Gallery images={[
+      { src: cpu01, alt: "Original IBM Blue Lightning DX2" },
+      { src: cpu02, alt: "AMD Am5x86-P75 ADZ" },
+      { src: cpu03, alt: "AMD Am5x86-P75 ADW" },
+      { src: cpu04, alt: "Am5x86 installed" },
+    ]} />
+
+    <h3>PSU Rebuild</h3>
+    <Gallery images={[
+      { src: psu01, alt: "PSU board recapped" },
+      { src: psu02, alt: "12V rail test" },
+      { src: psu03, alt: "5V rail test" },
+      { src: psu04, alt: "PSU reassembled" },
+    ]} />
+
+    <h3>Sound Blaster AWE32</h3>
+    <Gallery images={[{ src: sb01, alt: "AWE32 installed" }]} />
+  </article>
+
+  <p><a href="/">&larr; back to main [ESC]</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+</style>

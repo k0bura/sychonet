@@ -4,6 +4,8 @@ description: "Full restoration of a 1994 Compaq Portable 486c/66 luggable PC"
 date: 2026-02-21
 ---
 
+![Compaq Portable 486c](../../assets/images/compaq-486c/compaq-486c-header.jpg)
+
 A documentation project tracking the restoration of a Compaq Portable 486c/66 — a luggable 486-era PC with a built-in 10.4" TFT display.
 
 ## Machine Specifications
