@@ -32,7 +32,7 @@ const { title, description } = Astro.props;
 >
 > Go find a real computer.
 > Preferably one that weighs at
-> least 5kg and has a CRT.
+> least 10lbs and has a CRT.
 >
 > NO CARRIER
 `}</pre>
@@ -41,7 +41,7 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <footer>
-      <p>&copy; {new Date().getFullYear()} k0bura | <a href={`${import.meta.env.BASE_URL}`}>~/sychonet</a></p>
+      <p>&copy; {new Date().getFullYear()} k0bura | <a href={`${import.meta.env.BASE_URL}`}>~/sych0net</a></p>
     </footer>
     <div class="lightbox" id="lightbox">
       <img id="lightbox-img" src="" alt="" />
@@ -88,6 +88,7 @@ const { title, description } = Astro.props;
       const routes: Record<string, string> = {
         P: '/projects/',
         H: '/hardware/',
+        B: '/bulletin/',
         W: '/wall/',
         A: '/about/',
         L: '/links/',

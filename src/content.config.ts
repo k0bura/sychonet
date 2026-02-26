@@ -19,4 +19,14 @@ const hardware = defineCollection({
   }),
 });
 
-export const collections = { projects, hardware };
+const bulletin = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/bulletin' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date(),
+    type: z.enum(['notice', 'post']),
+  }),
+});
+
+export const collections = { projects, hardware, bulletin };

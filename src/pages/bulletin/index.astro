@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const entries = (await getCollection('bulletin'))
+  .filter((e) => !e.id.includes('/'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Base title="Bulletin Board - sychonet" description="Notices, dispatches, and longer posts from the sysop">
+  <div class="section-header">
+    <pre>{`
+▒▒▒ BULLETIN BOARD ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒`}</pre>
+  </div>
+
+  <ul>
+    {entries.map((entry) => (
+      <li class={entry.data.type === 'notice' ? 'notice' : 'post'}>
+        {entry.data.type === 'notice' ? (
+          <span><span class="notice-bang">!</span> {entry.data.title}</span>
+        ) : (
+          <span>
+            <span class="date">{entry.data.date.toISOString().split('T')[0]}</span>
+            <a href={`/bulletin/${entry.id}/`}>{entry.data.title}</a>
+            {entry.data.description && <span class="desc"> - {entry.data.description}</span>}
+          </span>
+        )}
+      </li>
+    ))}
+  </ul>
+
+  <p><a href="/">&larr; back to main [ESC]</a></p>
+</Base>
+
+<style>
+  .section-header pre {
+    color: #ffcc00;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0.3rem 0;
+  }
+
+  li.notice {
+    margin: 0.6rem 0;
+  }
+
+  .notice-bang {
+    color: #ff4444;
+    font-weight: bold;
+  }
+
+  .date {
+    color: #665200;
+    margin-right: 0.5rem;
+  }
+
+  .desc {
+    color: #999;
+  }
+</style>
