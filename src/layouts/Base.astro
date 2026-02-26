@@ -48,6 +48,7 @@ const { title, description } = Astro.props;
       <button class="lb-prev" id="lb-prev">&#9664;</button>
       <img id="lightbox-img" src="" alt="" />
       <button class="lb-next" id="lb-next">&#9654;</button>
+      <button class="lb-expand" id="lb-expand" title="Expand full resolution">&#x26F6;</button>
       <div class="lb-thumbs" id="lb-thumbs"></div>
       <span class="lightbox-hint" id="lb-hint">click or ESC to close</span>
     </div>
@@ -61,15 +62,23 @@ const { title, description } = Astro.props;
   const lbNext = document.getElementById('lb-next')!;
   const lbThumbs = document.getElementById('lb-thumbs')!;
   const lbHint = document.getElementById('lb-hint')!;
+  const lbExpand = document.getElementById('lb-expand')!;
 
   const images = Array.from(document.querySelectorAll('article img')) as HTMLImageElement[];
   let currentIndex = 0;
+
+  function collapseExpanded() {
+    lightbox.classList.remove('expanded');
+    lbExpand.innerHTML = '&#x26F6;';
+    lbExpand.title = 'Expand full resolution';
+  }
 
   function getFullSrc(img: HTMLImageElement): string {
     return img.dataset.full || img.src;
   }
 
   function showImage(index: number) {
+    collapseExpanded();
     currentIndex = index;
     const img = images[currentIndex];
     lightboxImg.src = getFullSrc(img);
@@ -122,6 +131,7 @@ const { title, description } = Astro.props;
   }
 
   function closeLightbox() {
+    collapseExpanded();
     lightbox.classList.remove('active');
   }
 
@@ -133,7 +143,10 @@ const { title, description } = Astro.props;
     if (e.target === lightbox) closeLightbox();
   });
 
-  lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+  lightboxImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lbExpand.click();
+  });
 
   lbPrev.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -143,6 +156,17 @@ const { title, description } = Astro.props;
   lbNext.addEventListener('click', (e) => {
     e.stopPropagation();
     showImage((currentIndex + 1) % images.length);
+  });
+
+  lbExpand.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (lightbox.classList.contains('expanded')) {
+      collapseExpanded();
+    } else {
+      lightbox.classList.add('expanded');
+      lbExpand.innerHTML = '&#x2716;';
+      lbExpand.title = 'Collapse to fitted view';
+    }
   });
 
   document.addEventListener('keydown', (e) => {
@@ -155,7 +179,11 @@ const { title, description } = Astro.props;
     if (e.key === 'Escape') {
       if (isOpen) {
         e.preventDefault();
-        closeLightbox();
+        if (lightbox.classList.contains('expanded')) {
+          collapseExpanded();
+        } else {
+          closeLightbox();
+        }
         return;
       }
       e.preventDefault();
@@ -393,7 +421,7 @@ const { title, description } = Astro.props;
     max-height: 70vh;
     object-fit: contain;
     border: 1px solid #332b00;
-    cursor: default;
+    cursor: zoom-in;
   }
 
   .lb-prev,
@@ -449,6 +477,46 @@ const { title, description } = Astro.props;
 
   .lb-thumbs img.active:hover {
     border-color: #ffcc00;
+  }
+
+  .lb-expand {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    color: #665200;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+
+  .lb-expand:hover {
+    color: #ffcc00;
+  }
+
+  .lightbox.expanded {
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: zoom-out;
+  }
+
+  .lightbox.expanded > #lightbox-img {
+    max-width: none;
+    max-height: none;
+    cursor: grab;
+    margin: auto;
+  }
+
+  .lightbox.expanded .lb-prev,
+  .lightbox.expanded .lb-next,
+  .lightbox.expanded .lb-thumbs,
+  .lightbox.expanded .lightbox-hint {
+    display: none;
   }
 
   .lightbox-hint {
