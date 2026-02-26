@@ -16,20 +16,20 @@ const MAX_MESSAGES = 500;
 const RATE_LIMIT_SEC = 60;
 
 const PREFIXES = [
-  'Ne0n', 'V4nta', 'H3x', 'Z3ro', 'V0id', 'T0xic', 'Shad0w', 'C1pher',
-  'N3xus', 'Bl1ght', '0mega', 'Dark', 'Pulse', 'Vect0r', 'Raz0r',
-  'Mal1ce', 'Specter', '0bsidian', 'Flux', 'C1nder', 'Hav0c',
-  'Kernel', 'Ven0m', 'Warp', 'Xen0', 'Dr1ft', 'Sable', 'Fract',
-  'Dusk', 'Quanta'
+  'Ne0n', 'vEcT0r', 'ShAd0w', 'c1pHer', 'N3xUs', '0mEga',
+  'Hex', 'z3r0', 'V0id', 'fLux', 'KeRnEl', 'raZ0r',
+  'SpEcTer', 'haV0c', 'Dr1ft', 'waRp', 'PuLse',
+  'quAnTa', 'SaBle', 'xeN0'
 ];
 
 const SUFFIXES = [
-  'C0re', 'Gr1d', 'Hub', 'Vault', 'F0rge', 'Cache', 'Sect0r',
-  'Relay', 'Matr1x', 'Archive', 'Shell', 'C1rcuit', 'Subnet',
-  'Pr0xy', 'Terminal', 'Databank', 'Sanctum', 'Lab', 'Array',
-  'Mainframe', 'Cluster', 'Gateway', 'Sandbox', 'N0de', 'Pipeline',
-  'Backd00r', 'Interface', 'Module', 'Chamber'
+  'n0De', 'c0Re', 'maTrIx', 'gr1d', 'huB',
+  'reLay', 'seCt0r', 'gaTeWay', 'teRmInAl',
+  'maInFrAme', 'arChIve', 'vaUlT', 'daTaBaNk',
+  'c1rCuIt', 'prOxy', 'clUsTer', 'saNdBox',
+  'arRay', 'piPeLiNe', 'inTeRfAce'
 ];
+
 function hashColo(colo: string): number {
   let h = 0;
   for (let i = 0; i < colo.length; i++) {
