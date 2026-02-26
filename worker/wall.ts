@@ -47,7 +47,7 @@ async function getBoardName(colo: string, kv: KVNamespace): Promise<string> {
   const usePrefix = h % 2 === 0;
   let name: string;
   if (usePrefix) {
-    name = PREFIXES[h % PREFIXES.length] + colo;
+    name = PREFIXES[h % PREFIXES.length] + '-' + colo;
   } else {
     name = colo + '-' + SUFFIXES[h % SUFFIXES.length];
   }
