@@ -7,7 +7,7 @@ date: 2024-10-18
 ![Compaq Portable 486c](../../assets/images/compaq-486c/compaq-486c-header.jpg)
 ![BBS login on Compaq 486c](../../assets/images/compaq-486c/overview/01-bbs-login.jpg)
 
-Ongoing restoration of my Compaq Portable 486c/66. Luggable 486-era PC with a built-in 10.4" TFT display.
+Ongoing restoration of my Compaq Portable 486c. Luggable 486-era PC with a built-in 10.4" TFT display.
 
 ## Machine Specifications
 
@@ -15,7 +15,7 @@ Ongoing restoration of my Compaq Portable 486c/66. Luggable 486-era PC with a bu
 |-----------|----------|----------|
 | **CPU** | IBM Blue Lightning DX2-66 MHz | AMD Am5x86-P75 (133 MHz, 4x multiplier) |
 | **RAM** | 4 MB | 32 MB |
-| **Hard Drive** | 210 MB Conner 3.5" | This still works! |
+| **Hard Drive** | 120 MB Conner 3.5" | This still works! |
 | **Display** | Sharp LQ10D016 10.4" TFT (640×480) | Sharp LQ104V1DG51 10.4" TFT (640×480) |
 | **Audio** | None | Sound Blaster AWE32 CT3900 (EISA slot 1) |
 | **Expansion** | 2× EISA slots | SCM ISAC2PR10 PCMCIA adapter (EISA slot 2) |
@@ -50,7 +50,7 @@ Keyboard cable is proprietary and gets brittle with age. Mine was damaged but st
 
 ### 4. Hard Drive Replacement (Future)
 
-The original 210 MB Conner 3.5" hard drive is, against all odds, still working perfectly. This thing has been spinning since the early '90s and shows absolutely no signs of stopping. It owes me nothing. Every time I power on the machine I half-expect to hear the click of death, but instead it just boots right up like it's 1993 and it has something to prove.
+The original 120 MB Conner 3.5" hard drive is, against all odds, still working perfectly. This thing has been spinning since the early '90s and shows absolutely no signs of stopping. It owes me nothing. Every time I power on the machine I half-expect to hear the click of death, but instead it just boots right up like it's 1993 and it has something to prove. I love it.
 
 When the day inevitably comes - and it will, because spinning rust doesn't live forever no matter how stubborn it is - the plan is to replace it with an **IDE-to-CompactFlash adapter**. Dead silent, no moving parts, boots faster, and the CF card can be swapped out on a modern machine for easy file transfers. It's the most popular hard drive replacement in the retro community for good reason.
 
