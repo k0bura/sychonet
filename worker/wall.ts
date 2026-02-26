@@ -74,17 +74,11 @@ export default {
       }
 
       const cf = (request as any).cf || {};
-      const asOrg = (cf.asOrganization || 'UNKNOWN')
-        .replace(/,?\s*(Inc|LLC|Ltd|Corp|Corporation|Communications|Enterprises|Services|Group|Company|Co)\.?/gi, '')
-        .trim()
-        .split(/\s+/)
-        .map((w: string, i: number) => i === 0 ? w.toLowerCase() : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-        .join('')
-        .slice(0, 30);
+      const location = (cf.colo || '???').toUpperCase();
 
       const entry: WallEntry = {
         name,
-        location: asOrg,
+        location,
         message,
         date: new Date().toISOString(),
       };
