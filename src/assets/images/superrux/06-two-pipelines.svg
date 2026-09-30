@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 250" role="img" aria-label="On the cassette, animation was authored by a person and stored on the tape's right channel. In the bear, no animation is stored at all; it is derived from the audio's loudness at playback time."><rect width="780" height="250" fill="#14171C"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E7E9ED"/>
+    </marker>
+    <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4FB6C1"/>
+    </marker>
+  </defs>
+  <g font-family="IBM Plex Mono, monospace" font-size="11">
+    <text x="0" y="12" fill="#E7E9ED" opacity=".55" letter-spacing="1">1985 &#8212; STORED</text>
+    <rect x="0" y="24" width="132" height="42" fill="none" stroke="#E7E9ED" stroke-opacity=".4"/>
+    <text x="66" y="49" text-anchor="middle" fill="#E7E9ED">animator</text>
+    <line x1="132" y1="45" x2="196" y2="45" stroke="#E7E9ED" marker-end="url(#ar)"/>
+    <text x="164" y="37" text-anchor="middle" fill="#E7E9ED" opacity=".7" font-size="10">authors</text>
+    <rect x="198" y="24" width="150" height="42" fill="rgba(79,182,193,.15)" stroke="#4FB6C1"/>
+    <text x="273" y="43" text-anchor="middle" fill="#4FB6C1">right channel</text>
+    <text x="273" y="57" text-anchor="middle" fill="#4FB6C1" font-size="9.5">6 fields @ 58 Hz</text>
+    <line x1="348" y1="45" x2="412" y2="45" stroke="#E7E9ED" marker-end="url(#ar)"/>
+    <rect x="414" y="24" width="120" height="42" fill="none" stroke="#E7E9ED" stroke-opacity=".4"/>
+    <text x="474" y="49" text-anchor="middle" fill="#E7E9ED">motors</text>
+    <rect x="198" y="86" width="150" height="34" fill="rgba(231,163,60,.15)" stroke="#E7A33C" stroke-opacity=".7"/>
+    <text x="273" y="107" text-anchor="middle" fill="#E7A33C">left channel &#8212; voice</text>
+    <text x="360" y="107" fill="#E7E9ED" opacity=".6" font-size="10">plays; never consulted for motion</text>
+
+    <line x1="0" y1="150" x2="780" y2="150" stroke="#E7E9ED" stroke-opacity=".14"/>
+
+    <text x="0" y="176" fill="#E7E9ED" opacity=".55" letter-spacing="1">NOW &#8212; DERIVED</text>
+    <rect x="0" y="188" width="132" height="42" fill="rgba(231,163,60,.15)" stroke="#E7A33C" stroke-opacity=".7"/>
+    <text x="66" y="213" text-anchor="middle" fill="#E7A33C">TTS audio</text>
+    <line x1="132" y1="209" x2="196" y2="209" stroke="#4FB6C1" marker-end="url(#ard)"/>
+    <text x="164" y="201" text-anchor="middle" fill="#4FB6C1" font-size="10">loudness</text>
+    <rect x="198" y="188" width="150" height="42" fill="rgba(79,182,193,.15)" stroke="#4FB6C1"/>
+    <text x="273" y="207" text-anchor="middle" fill="#4FB6C1">envelope</text>
+    <text x="273" y="221" text-anchor="middle" fill="#4FB6C1" font-size="9.5">one number, 50 Hz</text>
+    <line x1="348" y1="209" x2="412" y2="209" stroke="#E7E9ED" marker-end="url(#ar)"/>
+    <rect x="414" y="188" width="120" height="42" fill="none" stroke="#E7E9ED" stroke-opacity=".4"/>
+    <text x="474" y="213" text-anchor="middle" fill="#E7E9ED">motors</text>
+    <text x="552" y="207" fill="#E7E9ED" opacity=".6" font-size="10">nothing is stored;</text>
+    <text x="552" y="221" fill="#E7E9ED" opacity=".6" font-size="10">it is computed as it plays</text>
+  </g>
+</svg>
