@@ -11,7 +11,7 @@ A Hayes-compatible WiFi modem card for the Compaq Portable 486c's 50-pin Enhance
 
 ## Status
 
-Still Phase 0, but with a lot more known. The architecture is settled, the slot is documented properly, and there is a breakout board ready to send to a fab.
+Still Phase 0, but with a lot more known. The architecture is settled, the slot is documented properly, and the breakout board is on order from OSH Park.
 
 Where things stand:
 
@@ -20,7 +20,8 @@ Where things stand:
 - Original Compaq modem torn down and photographed. It is built the same way, which is reassuring.
 - Mating connector desoldered from that modem. It is keyed, so nothing off the shelf fits the slot.
 - Custom breakout board designed around that one connector. Passes design rule check. Paper print checked against the modem's holes and it lines up.
-- No boards ordered yet. No firmware yet. Nothing has driven the bus yet.
+- Breakout board ordered from OSH Park. Waiting on it.
+- No firmware yet. Nothing has driven the bus yet.
 
 Progress in detail:
 
@@ -143,7 +144,7 @@ Hayes-compatible for Telix, Procomm, and friends.
 
 - [x] Mating connector (desoldered from the original modem)
 - [ ] Multimeter
-- [ ] Breakout PCB (designed, not ordered)
+- [ ] Breakout PCB (ordered from OSH Park, not here yet)
 - [ ] Logic analyzer, 8 channels
 - [ ] 16C550 in DIP-40, plus a spare
 - [ ] 74HCT125 (interrupt gate, IOEN buffer)
