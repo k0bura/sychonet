@@ -96,7 +96,7 @@ Previously had a Xircom RealPort Ethernet 10/100 (RE-100) but it hogged both slo
 
 ### ESP32 WiFi Modem (Enhanced Options Slot)
 
-Building a custom ESP32-based WiFi modem card for the proprietary 50-pin Enhanced Options Slot. Emulates a Hayes-compatible modem over WiFi. No PCMCIA slot or external serial cable needed.
+Building a custom WiFi modem card for the proprietary 50-pin Enhanced Options Slot. A real 16C550 UART on the bus with an ESP32 behind it, so DOS sees an ordinary COM port and a Hayes-compatible modem over WiFi. No PCMCIA slot or external serial cable needed. Breakout board for the keyed 1.27mm connector is designed.
 
 **[Full WiFi modem project →](/projects/compaq-wifimodem/)**
 
