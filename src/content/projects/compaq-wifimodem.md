@@ -20,7 +20,7 @@ Where things stand:
 - Original Compaq modem torn down and photographed. It is built the same way, which is reassuring.
 - Mating connector desoldered from that modem. It is keyed, so nothing off the shelf fits the slot.
 - Custom breakout board designed around that one connector. Passes design rule check. Paper print checked against the modem's holes and it lines up.
-- Breakout board ordered from OSH Park. Waiting on it.
+- Breakout board ordered from OSH Park, four layers. Waiting on it.
 - No firmware yet. Nothing has driven the bus yet.
 
 Progress in detail:
@@ -28,7 +28,7 @@ Progress in detail:
 - **[Options slot reference](/projects/compaq-wifimodem/options-slot/)**: what every signal does, which direction it goes, and where that information came from
 - **[Pinout and wiring](/projects/compaq-wifimodem/pinout/)**: all 50 pins and how the 16C550 and ESP32 hook up
 - **[Original modem teardown](/projects/compaq-wifimodem/modem-teardown/)**: what Compaq put on their own card and what it says about the slot
-- **[Breakout board](/projects/compaq-wifimodem/breakout/)**: getting 50 signals out of a 1.27mm connector on two layers
+- **[Breakout board](/projects/compaq-wifimodem/breakout/)**: getting 50 signals out of a 1.27mm connector without a single via
 
 ## Two documents, one slot
 
